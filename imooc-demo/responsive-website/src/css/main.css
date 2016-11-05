@@ -2,9 +2,6 @@
  * 页面样式
  */
 
-
-
-
  
 /**	
  * 基本默认样式
@@ -816,3 +813,70 @@ footer p {
 }
 
 
+/**	
+ * 打印样式
+ */
+
+@media print {
+	*,
+	*:before,
+	*:after {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+
+	a[href]:after {
+		content: "(" attr(href) ")";
+	}
+	
+	a[title]:after {
+		content: "(" attr(title) ")";
+	}
+
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after {
+		content: "";
+	}
+
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+		/*欧朋浏览器专用，避免插入分页符*/
+	}
+
+	thead {
+		display: table-header-group;
+	}
+
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		/*页面发生分页时，在页面底部最少保留的行数*/
+		widows: 3;
+		/*页面发生分页时，在页面顶部最少保留的行数*/
+	}
+
+	h2,
+	h3 {
+		page-break-after: avoid;
+		/*避免在元素后面插入一个分页符*/
+	}
+}
