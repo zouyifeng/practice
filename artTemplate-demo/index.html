@@ -1,0 +1,16 @@
+<html>
+<head>
+<meta charset=”utf-8″>
+<title>模板</title>
+</head>
+ 
+<body>
+     <div id=”main”>
+          <ul>
+               {{each list}}
+               <li>编号：{{$value.id}} &nbsp;&nbsp;姓名：{{$value.name}}</a></li>
+               {{/each}}
+          </ul>
+     </div>
+</body>
+</html>
