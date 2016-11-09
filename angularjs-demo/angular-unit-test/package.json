@@ -1,0 +1,21 @@
+{
+  "name": "angular-unit-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "karma.conf.js",
+  "dependencies": {
+    "angularjs": "^0.0.1",
+    "jasmine-core": "^2.4.1",
+    "karma-chrome-launcher": "^1.0.1"
+  },
+  "devDependencies": {
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

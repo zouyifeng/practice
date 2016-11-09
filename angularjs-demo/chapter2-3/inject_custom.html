@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="controllerA">
+        <h2>Application message</h2>
+        {{message}}
+    </div>
+    <hr>
+    <div ng-controller="controllerB">
+        <h2>module message:</h2>
+        {{message}}
+    </div>
+    <script src="../angular.min.js"></script>
+    <script src="js/inject_custom.js"></script>
+</body>
+</html>
