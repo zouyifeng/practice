@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div ng-controller="myController">
+        <h2>sorting and filtering</h2>
+        {{phrase | censor:censorText}}<br>
+        {{'This is some bad,dark,evil text' | censor:'happy'}}
+        <p ng-click="filterText()">{{txt}}</p>
+    </div>
+    <script src='../angular.min.js'></script>
+    <script src="js/filter_custom.js"></script>
+</body>
+</html>

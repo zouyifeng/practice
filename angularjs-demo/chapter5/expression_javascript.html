@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a{color:blue;text-decoration: underline;cursor:pointer;}
+    </style>
+</head>
+<body>
+    <div ng-controller="myController">
+        <h1>expression</h1>
+        array:
+        {{myArr}}<br>
+        <a ng-click="myArr.push(Math.floor(Math.random()*100+1))">click to append value to the array</a>
+        <hr>
+        elements removed from array:
+        {{removedArr}}<br>
+        
+        <a ng-click="removedArr.push(myArr.shift())">click to remove the first value from the array</a>
+        <hr>
+        size of array:<br>
+        {{myArr.length}}
+        <hr>
+        max number removed from the array:<br>
+        {{Math.max.apply(Math,removedArr)}}
+        <hr>
+        <script src="../angular.min.js"></script>
+        <script src="js/expression_javascript.js"></script>
+    </div>
+</body>
+</html>

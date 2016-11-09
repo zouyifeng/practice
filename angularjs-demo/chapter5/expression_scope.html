@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a{color:blue;text-decoration: underline;cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div ng-controller="myController">
+        directly accessing variable in the scope:<br>
+        {{speed}} {{vehicle}}
+        <hr>
+        adding variable in the scope:<br>
+        {{speed+' '+vehicle}}
+        <hr>
+        calling function in the scope:<br>
+        {{lower(speed)}} {{upper('Jeep')}}
+        <hr>
+        <a ng-click="setValues('Fast',newVehicle)">click to change to fast {{newVehicle}}</a>
+        <hr>
+        <a ng-click="setValues(newSpeed,'Rocket')">click to change {{newSpeed}} Rocket</a>
+        <hr>
+        <a ng-click="vehicle='Car'">click to change the vehicle to a car</a>
+        <hr>
+        <a ng-click="vehicle='Enhanced '+vehicle">click to enhance vehicle</a>
+        <hr>
+        <script src="../angular.min.js"></script>
+        <script src="js/expression_scope.js"></script>
+    </div>
+</body>
+</html>
