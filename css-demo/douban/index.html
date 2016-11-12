@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣</title>
+    <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="nav"><!-- 头部 -->
+        <div class="nav-links">
+            <ul>
+                <li><a href="" class="lnk-books">豆瓣读书</a></li>
+                <li><a href="" class="lnk-movie">豆瓣电影</a></li>
+                <li><a href="" class="lnk-music">豆瓣音乐</a></li>
+                <li><a href="" class="lnk-group">豆瓣小组</a></li>
+                <li><a href="" class="lnk-events">豆瓣同城</a></li>
+                <li><a href="" class="lnk-fm">豆瓣FM</a></li>
+                <li><a href="" class="lnk-dongxi">豆瓣东西</a></li>
+            </ul>
+        </div>
+        <h1>
+            <a href="">豆瓣</a>
+        </h1>
+        <div class="srh">
+            <form action="#" method="get">
+                <span class="inp">
+                    <input type="text" placeholder="书籍、电影、音乐、小组、小站、成员">
+                </span>
+                <span class="bn">
+                    <input type="submit" value="搜索">
+                </span>
+            </form>
+        </div>
+    </div><!-- 头部结束 -->
+    <div id="reg-new"><!-- 注册开始 -->
+        <div class="wrapper">
+            <div class="login">
+                <form action="" id="lzform" name="lzform" method="post">
+                    <fieldset>
+                        <legend>登陆</legend>
+                        <input type="hidden" value="index_nav" name="source">
+                        <div class="item item-account">
+                            <input type="text" id="form" name="form_email" class="inp" placeholder="邮箱/手机号码">
+                        </div>
+                        <div class="item item-passwd">
+                            <input type="password" id="form_password" class="inp" placeholder="密码">
+                            <div class="opt"><a href="#">忘记密码</a></div>
+                        </div>
+                        <div class="item item-remember">
+                            <label for=""><input type="checkbox" id="form_remember">记住我</input></label>
+                        </div>
+                        <div class="item-submit">
+                            <input  value="登陆" type="submit" class="bn-submit">
+                            <a href="" class="lnk-reg">注册</a>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="app">
+                <p class="app-title">豆瓣</p>
+                <p class="app-slogan">汇集一亿人的生活趣味</p>
+                <a href="" class="lnk-app">下载豆瓣客户端</a>
+                <div class="app-qr"  id="app_qr">
+                    <a href="" id="expand-qr" class="lnk-qr">
+                        <img src="img/sm_qrcode.png" width="28" height="28">
+                    </a>
+                    <div class="app-qr-expand" id="app_qr_expand">
+                        <img src="img/qrcode.png" width="160" height="160">
+                        <p>ios/Android扫码直接下载</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            (function(){
+                var app_qr = document.getElementById("app_qr");
+                var app_qr_expand = document.getElementById("app_qr_expand");
+                app_qr.onmouseover = function(){
+                    app_qr_expand.style.display = "block";
+                };
+                app_qr.onmouseout = function(){
+                   app_qr_expand.style.display = "none";
+                };
+            }());
+        </script>
+    </div><!-- 注册结束 -->
+    <div id="sns" class="section">
+        <div class="wrapper">
+            <div class="side">
+                <div style="margin:10px 0">
+                    <a href="">
+                        <img src="img/douban1.jpg" width="265" alt="">
+                    </a>
+                </div>
+                <h2>线上活动&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                    <span>&nbsp;(
+                        <a href="">更多</a>
+                    )</span>
+                </h2>
+                <div class="online">
+                    <ul>
+                        <li>
+                            <div class="title">
+                                <a href="">你在读什么书？</a>
+                            </div>
+                            <div>
+                                时间：9月28日 -12 月27日</br>
+                                <span class="num">4783人参加</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="">【全球性征集】女性正在做什么（写下你的故事）</a>
+                            </div>
+                            <div>
+                                时间：9月28日 -12 月27日</br>
+                                <span class="num">3185人参加</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class="mod">
+                    <h2>热点内容&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·</h2>
+                    <div class="albums">
+                        <ul>
+                            <li>
+                                <div class="pic"><a href=""><img src="img/pic1.jpg" alt=""></a></div>
+                                <a href="">街拍 2015秋冬</a>
+                                <span class="num">635张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic"><a href=""><img src="img/pic2.jpg" alt=""></a></div>
+                                <a href="">HK - 我真的不是去吃的……</a>
+                                <span class="num">20张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic"><a href=""><img src="img/pic3.jpg" alt=""></a></div>
+                                <a href="">【收藏】手工中国结编织详解</a>
+                                <span class="num">57张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic"><a href=""><img src="img/pic4.jpg" alt=""></a></div>
+                                <a href="">纪晓岚表情包</a>
+                                <span class="num">32张照片</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notes">
+                        <ul>
+                            <li class="first">
+                                <div class="title"><a href="">推理小说入门：流派与推荐书目</a></div>
+                                <div class="author">Elliemi的日记</div>
+                                <p>前几天和一个同样喜欢推理小说的朋友聊天，说到一些经典有趣的作品，他建议我来一...</p>
+                            </li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？德国人无聊得只能看书？德国人无聊得只能看书？德国人无聊得只能看书？德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                            <li><a href="">德国人无聊得只能看书？</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- sns开始 -->
+    </div><!-- sns结束 -->
+    <div id="movie" class="section"><!-- movie开始 -->
+        <div class="wrapper">
+            <div class="sidenav">
+                <h2 class="section-title"><a href="http://movie.douban.com">电影</a></h2>
+                <div class="side-links nav-anon"><ul>
+                    <li><a href="">影讯&购票</a></li>
+                    <li class="site-nav-bt"><a href="">选电影</a><img src="img/new_menu.gif" alt="" style="top:-5px;position:relative"></li>
+                    <li><a href="">电视剧</a></li>
+                    <li><a href="">排行榜</a></li>
+                    <li><a href="">分类</a></li>
+                    <li><a href="">影评</a></li>
+                    <li><a href="">预告片</a></li>
+                </ul></div>
+                <div class="apps-list"></div>
+            </div>
+            <div class="side">
+                <div class="mod">
+                    <h2>影片分类
+                    <span class="p1"><a href="">更多</a></span>
+                    </h2>
+                    <div class="tags list">
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                        <li><a href="">喜剧</a></li>
+                    </div>
+                </div>
+                <div class="mod">
+                    <h2>近期热门<span class="p1"><a href="">更多</a></span></h2>
+                    <div class="list1 movie-charts">
+                        <ol>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                            <li><a href="">小王子</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <h2>正在热映<span class="p1"><a href="">更多</a></span></h2>
+                <div class="movie-list list">
+                    <ul>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href=""><img src="img/movie.jpg" alt=""></a>
+                            </div>
+                            <div class="title"><a href="">火星救援</a></div>
+                            <div class="rating"><span class="allstar45"></span><i>8.4</i></div>
+                            <a href="" class="bn-link bn-ticket">座位选购</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="extra" style="margin: 0 auto;">
+            <img src="http://img3.douban.com/view/dale-online/dale_ad/public/26dfa5122b207e7.jpg" alt="">
+        </div>
+    </div><!-- movie结束 -->
+    <div class="wrapper">
+        <div id="ft">
+            <span class="fleft grey-link">
+                 © 2005－2015 douban.com, all rights reserved
+            <br>
+            <a href="#">京ICP证090015号</a>京ICP备11027288号 网络视听许可证<br>
+            <a href="http://www.douban.com/about?topic=licence" target="_blank">0110418</a>号
+            <br>
+            京网文[2015]2026-368号 
+            <img src="http://img3.douban.com/pics/biaoshi.gif" alt="">
+             京公网安备110105000728&nbsp;&nbsp;新出网证(京)字129号
+             <br>
+            违法和不良信息举报电话：4006910007&nbsp;
+            <img src="http://img3.douban.com/img/files/file-1423193113.png" height="16" align="top"><br>
+            <img src="http://img3.douban.com/pics/icon/jubao.png" align="absmiddle" width="15px">
+            <a href="http://www.12377.cn/">违法和不良信息举报中心</a>
+            举报电话：12377 举报邮箱：jubao@12377.cn
+            </span>
+            <span class="fright">
+                <a href="">关于豆瓣</a> ·
+                <a href="">在豆瓣工作</a> ·
+                <a href="">联系我们</a> ·
+                <a href="">免责声明</a> ·
+                <a href="">帮助中心</a> ·
+                <a href="">移动应用</a> ·
+                <a href="">豆瓣广告</a> ·
+            </span>
+        </div>  
+    </div>
+</body>
+</html>
