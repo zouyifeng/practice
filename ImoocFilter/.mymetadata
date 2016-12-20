@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="ImoocFilter"
+  id="myeclipse.1481844606696"
+  context-root="/ImoocFilter"
+  j2ee-spec="5.0"
+  archive="ImoocFilter.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
