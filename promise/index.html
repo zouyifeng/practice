@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./index.js"></script>
+  <script>
+    // 三种状态
+    const PENDING = 1 // 等待
+    const FULFILLED = 2 // 完成
+    const REJECTED = 3  // 拒绝
+
+    class KPromise {
+      constructor(cb) {
+        this.state = PENDING  // 初始默认状态是PENDING
+        this.value = null // resolve的结果赋值
+        this.reason = null  // reject的原因赋值
+        this.fulfilledCbs = [] // 执行成功函数列表，针对多个then函数
+        this.rejectCbs = [] // 执行失败函数列表，针对多个then函数
+
+        // 使用箭头函数，确保this指向当前实例
+        // 箭头函数的this指向在定义已经确立，不受到函数执行环境影响
+        let resolve = data => {
+          // setTimeout 使回调函数进入异步队列
+          setTimeout(() => {
+            if (this.state === PENDING) {
+              // 更改state为FULFILLED
+              this.state = FULFILLED   
+              this.value = data
+              this.fulfilledCbs.forEach(v => v(data))
+            }
+          });
+        }
+
+        let reject = reason => {
+          setTimeout(() => {
+            if (this.state == PENDING) {
+              // 更改state为REJECTED
+              this.state = REJECTED
+              this.reason = reason
+              this.rejectCbs.forEach(v => v(reason))
+            } 
+          });
+        }
+
+        cb(resolve, reject)
+      }
+
+      then (onFufilled, onRejected) {
+        if (typeof onFufilled === 'function') {
+          // resolve函数队列
+          this.fulfilledCbs.push(onFufilled)
+          console.log(this.fulfilledCbs)
+        }
+        if (typeof onRejected === 'function') {
+          // reject函数队列
+          this.rejectCbs.push(onRejected)
+          console.log(this.rejectCbs)
+        }
+        // 返回当前this实例，可以使得链式调用
+        return this
+      }
+
+      // 静态方法，可以通过promise.all直接调用，传入promise对象数组
+      static all (promises){
+        // 返回promise对象
+        return new KPromise((resolve, reject) => {
+          let count = 0
+          let values=  []
+          function done() {
+            count += 1
+            // 如果所有promise成功执行，执行resolve，返回结果列表
+            if (count == promises.length) {
+              resolve(values)
+            }
+          }
+          // 遍历参数promise对象数组，并注册then函数
+          // 当参数数组里promise对象成功执行，将成功的值存入变量，当成功执结果数量等于数组长度，
+          promises.forEach((p, i) => {
+            p.then(val => {
+              values[i] = val
+              done()
+            }, reject)
+          })
+        })
+      }
+    }
+
+    let promise = new KPromise((resolve, reject) => {
+      if (2 < 1) {
+        resolve('hi')
+      } else {
+        reject('出错了')
+      }
+    }).then(data => {
+      console.log(1, data)
+    }, reason => {
+      throw new Error(reason)
+    }).then(data => {
+      console.log(2, data)
+    }, reason => {
+      throw new Error(reason)
+    })
+
+    // const p1 = new KPromise((resolve, reject) => {
+    //   resolve(1)
+    // })
+
+    // const p2 = new KPromise((resolve, reject) => {
+    //   resolve(2)
+    // })
+
+    // KPromise.all([p1, p2]).then(data => {
+    //   console.log(data)
+    // }, err => {
+    //   console.log(err)
+    // })
+  </script> 
+</head>
+<body>
+  
+</body>
+</html>
