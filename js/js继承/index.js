@@ -25,6 +25,7 @@ instance.colors.push('white');
 var instance1 = new SubType();
 console.log(1, instance.colors);
 // 缺点：多个实例可以对原型链上的引用类型的对象，进行操作篡改
+// 无法实现多继承
 
 
 // 2、借用构造函数继承
@@ -80,6 +81,13 @@ console.log(3, instance2.colors)
 instance2.sayName()
 instance2.sayAge()
 
+// 缺点：
+// 第一次调用SuperType()：给SubType.prototype写入两个属性name，color。
+// 第二次调用SuperType()：给instance1写入两个属性name，color。
+// 实例对象instance1上的两个属性就屏蔽了其原型对象SubType.prototype的两个同名属性。
+// 所以，组合模式的缺点就是在使用子类创建实例对象时，其原型中会存在两份相同的属性/方法。
+
+
 
 // 4、原型式继承
 // 利用空对象（函数）作为中介，将摸个某象直接赋值给空对象（函数）构造函数的原型
@@ -107,6 +115,8 @@ console.log(4, person.friends);
 
 
 // 5、寄生式继承
+// 核心：在原型式继承的基础上，增强对象，返回构造函数
+// 函数的主要作用是为构造函数新增属性和方法，以增强函数
 function createAnother(original) {
   var clone = object(original)
   clone.sayHi = function() {
@@ -121,8 +131,11 @@ var person = {
 }
 var anotherPerson = createAnother(person)
 anotherPerson.sayHi()
+// 缺点：原型链继承多个实例的引用类型属性指向相同，存在篡改的可能。无法传递参数
+
 
 // 寄生组合式继承
+// 结合借用构造函数传递参数和寄生模式实现继承
 function inheritPrototype(subType, superType) {
   var prototype = Object.create(superType.prototype)
   prototype.constructor = subType;
@@ -155,6 +168,8 @@ var instance2 = new SubType('aaa', 24)
 instance1.colors.push('2')
 instance2.colors.push('3')
 
+// 优点：只调用了一次SuperType 构造函数，并且因此避免了在SubType.prototype 上创建不必要的、多余的属性。于此同时，原型链还能保持不变；因此，还能够正常使用instanceof 和isPrototypeOf()
+
 // ES6类继承extends
 
 class Rectangle {
@@ -179,7 +194,6 @@ const rectangle = new Rectangle(10, 20);
 console.log(rectangle.area);
 // 输出 200
 
------------------------------------------------------------------
 // 继承
 class Square extends Rectangle {
 
