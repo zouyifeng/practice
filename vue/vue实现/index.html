@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="./vue底层原理关系图.png" alt="">
+    <div id="app">
+        {{test}}
+        <p k-text="test"></p>
+        <p k-html="html"></p>
+        <p>
+            <input type="text" k-model="test">
+        </p>
+        <p>
+            <button @click="onClick">按钮</button>
+        </p>
+    </div>
+
+    <script src="kvue.js"></script>
+    <script src="compile.js"></script>
+    <script>
+      const o = new KVue({
+        el: "#app",
+        data: {
+          test: "allala",
+          foo: { bar: "bar" },
+          html: '<button>adfadsf</button>'
+        },
+        methods: {
+            onClick() {
+                alert('blabla')
+            }
+        },
+      });
+      
+      // o.$data.test = "hello,kvue!";
+      
+
+      
+      // o.$data.foo.bar = "1";
+      
+    </script>
+
+    <!-- <div id="app">
+        <p>你好，<span id="name"></span></p>
+    </div>
+    <script>
+        var obj = {};
+
+        Object.defineProperty(obj, 'name', {
+            get: function () {
+                return document.getElementById('name').innerHTML;
+            },
+            set: function (inner) {
+                document.getElementById('name').innerHTML = inner;
+            }
+        })
+
+        
+        obj.name = '乔峰';
+        
+        
+    </script> -->
+  </body>
+</html>
