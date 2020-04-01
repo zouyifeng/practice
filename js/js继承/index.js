@@ -151,7 +151,7 @@ SuperType.prototype.sayName = function () {
   console.log(this.name)
 }
 
-function SubType (name, type) {
+function SubType (name, age) {
   SuperType.call(this, name)
   this.age = age
 }
