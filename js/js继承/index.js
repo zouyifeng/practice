@@ -1,5 +1,5 @@
 // 1、原型链继承
-function SuperType () {
+function SuperType() {
   this.property = true;
   this.colors = ['red', 'black'];
 }
@@ -8,7 +8,7 @@ SuperType.prototype.getSuperValue = function () {
   return this.property;
 }
 
-function SubType () {
+function SubType() {
   this.subproperty = false;
 }
 
@@ -30,7 +30,7 @@ console.log(1, instance.colors);
 
 // 2、借用构造函数继承
 function SuperType() {
-  this.colors=['red', 'green']
+  this.colors = ['red', 'green']
 }
 
 // 关键操作：创建子类实例的时候，调用SuperType构造函数
@@ -55,7 +55,7 @@ function SuperType(name) {
   this.colors = ['red', 'blue']
 }
 
-SuperType.prototype.sayName = function() {
+SuperType.prototype.sayName = function () {
   console.log(3, this.name)
 }
 
@@ -119,7 +119,7 @@ console.log(4, person.friends);
 // 函数的主要作用是为构造函数新增属性和方法，以增强函数
 function createAnother(original) {
   var clone = object(original)
-  clone.sayHi = function() {
+  clone.sayHi = function () {
     console.log('hi')
   }
   return clone;
@@ -142,7 +142,7 @@ function inheritPrototype(subType, superType) {
   subType.prototype = prototype;
 }
 
-function SuperType (name) {
+function SuperType(name) {
   this.name = name;
   this.colors = ['red']
 }
@@ -151,14 +151,14 @@ SuperType.prototype.sayName = function () {
   console.log(this.name)
 }
 
-function SubType (name, age) {
+function SubType(name, age) {
   SuperType.call(this, name)
   this.age = age
 }
 
-inheritPrototype(subType, superType)
+inheritPrototype(SubType, SuperType)
 
-subType.prototype.sayAge = function () {
+SubType.prototype.sayAge = function () {
   console.log(this.age)
 }
 
@@ -175,18 +175,18 @@ instance2.colors.push('3')
 class Rectangle {
   // constructor
   constructor(height, width) {
-      this.height = height;
-      this.width = width;
+    this.height = height;
+    this.width = width;
   }
-  
+
   // Getter
   get area() {
-      return this.calcArea()
+    return this.calcArea()
   }
-  
+
   // Method
   calcArea() {
-      return this.height * this.width;
+    return this.height * this.width;
   }
 }
 
@@ -197,16 +197,16 @@ console.log(rectangle.area);
 // 继承
 class Square extends Rectangle {
 
-constructor(length) {
-  super(length, length);
-  
-  // 如果子类中存在构造函数，则需要在使用“this”之前首先调用 super()。
-  this.name = 'Square';
-}
+  constructor(length) {
+    super(length, length);
 
-get area() {
-  return this.height * this.width;
-}
+    // 如果子类中存在构造函数，则需要在使用“this”之前首先调用 super()。
+    this.name = 'Square';
+  }
+
+  get area() {
+    return this.height * this.width;
+  }
 }
 
 const square = new Square(10);
@@ -214,24 +214,38 @@ console.log(square.area);
 // 输出 100
 
 // extends 核心代码
-
 function _inherits(subType, superType) {
-  
+
   // 创建对象，创建父类原型的一个副本
   // 增强对象，弥补因重写原型而失去的默认的constructor 属性
   // 指定对象，将新创建的对象赋值给子类的原型
   subType.prototype = Object.create(superType && superType.prototype, {
-      constructor: {
-          value: subType,
-          enumerable: false,
-          writable: true,
-          configurable: true
-      }
+    constructor: {
+      value: subType,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
   });
-  
+
   if (superType) {
-      Object.setPrototypeOf 
-          ? Object.setPrototypeOf(subType, superType) 
-          : subType.__proto__ = superType;
+    Object.setPrototypeOf ?
+      Object.setPrototypeOf(subType, superType) :
+      subType.__proto__ = superType;
   }
 }
+
+// 在 ES5 中，构造函数 B 的实例继承构造函数 A 的实例属性是通过 A.call(this) 来实现的，
+// 在 ES6 中，类 B 的实例继承类 A 的实例属性，是通过 super() 实现的。
+
+// 但是在继承原生构造函数的情况下，A.call(this) 与 super() 在功能上是有区别的，
+// ES5 中 A.call(this) 中的 this 是构造函数 B 的实例，也就是在实现实例属性继承上，ES5 是先创造构造函数 B 的实例，然后在让这个实例通过 A.call(this) 实现实例属性继承，
+// 在 ES6 中，是先新建父类的实例对象this，然后再用子类的构造函数修饰 this，使得父类的所有行为都可以继承。
+// 这是 ES6 与 ES5 继承的第二个区别
+
+
+
+// 在 ES6 与 ES5 中，类 B 的实例 b 的原型链与构造函数 B 的实例 b 的原型链是相同的，
+// 但是在 ES6 中类 B 继承了类 A 的属性，在 ES5 中，构造函数 B 没有继承构造函数 A 的属性，
+// ES6 B.__proto__ === A // true  ES5 B.__proto__ === Function.protoType // true
+// 这是 ES6 与 ES5 继承的第一个区别
