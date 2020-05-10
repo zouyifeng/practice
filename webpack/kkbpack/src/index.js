@@ -1,5 +1,8 @@
-const sayHi = require('./a.js')
-sayHi('kkb')
+#!  /usr/bin/env  node
 
-const sayBye = require('./b.js')
-sayBye('kkb')
+const sayHi = require('./a.js');
+const sayBye = require('./b.js');
+// require('./index.css')
+
+sayHi('kkb');
+sayBye('kkb');

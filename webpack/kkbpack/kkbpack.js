@@ -28,13 +28,12 @@ class KkbPack {
   createModule(modulePath, name) {
     //  modulePath是绝对路径，获取文件
     // name是相对路径，作为key
-    let fileContent = fs.readFileSync(modulePath, 'utf-8')
+    // let fileContent = fs.readFileSync(modulePath, 'utf-8')
+
+    let fileContent = this.getCode(modulePath);
     //  ./src/index.js  文件的父目录，其实就是src
     // 解析soruce源码
-    const {
-      code,
-      deps
-    } = this.parse(fileContent, path.dirname(name))
+    const { code, deps } = this.parse(fileContent, path.dirname(name))
     //  this.modules[name]  =  code
     this.modules[name] = `function(module,exports,__kkbpack_require__){ eval(\`${code}\`)}`
     // 递归获取依赖
@@ -42,6 +41,18 @@ class KkbPack {
       this.createModule(path.join(this.root, dep), './' + dep)
     })
   }
+
+  getCode (modulePath) {
+    let content = fs.readFileSync(modulePath, 'utf-8')
+    // this.config.module.rules.forEach(r => {
+    //   if(r.test.test(modulePath)) {
+    //     const loader = require(r.use[0])
+    //     content = loader(content)
+    //   }
+    // })
+    return content
+  }
+  
   parse(code, parent) {
     let deps = []
     //  识别  require('xx')
@@ -49,6 +60,7 @@ class KkbPack {
     code = code.replace(r, function (match, arg) {
       //  console.log(1,match,  arg.replace(/'|"/g,''))
       const retPath = path.join(parent, arg.replace(/'|"/g, '')) 
+      console.log('retPath: ', retPath);
       deps.push(retPath)
       return `__kkbpack_require__("./${retPath}")`
     })

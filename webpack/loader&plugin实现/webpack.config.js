@@ -1,5 +1,7 @@
 const path = require("path");
 const CopyrightWebpackPlugin = require("./plugins/copyright-webpack-plugin");
+const BasicPlugin = require('./plugins/basic-plugin')
+const EndWebpackPlugin = require('./plugins/end-webpack-plugin')
 
 module.exports = {
   mode: "development",
@@ -12,9 +14,9 @@ module.exports = {
       {
         test: /\.js$/,
         use: [
-          "replaceLoader",
+          "replaceLoader", // 第二执行
           {
-            loader: "replaceLoaderAsync",
+            loader: "replaceLoaderAsync",  // 第一执行
             options: {
               name: "kaikeba"
             }
@@ -26,6 +28,14 @@ module.exports = {
   plugins: [
     new CopyrightWebpackPlugin({
       name: "gangtiexia"
+    }),
+    new BasicPlugin({
+      type: 'basic plugin option'
+    }),
+    new EndWebpackPlugin(msg => {
+      console.log(msg);
+    }, err => {
+      console.log(err);
     })
   ],
   output: {
