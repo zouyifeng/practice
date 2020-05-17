@@ -12,16 +12,27 @@ class Compiler {
   run() {
     // 解析入口文件
     const info = this.build(this.entry);
+    // console.log('info: ', info);
     this.modules.push(info);
-    this.modules.forEach(({ dependecies }) => {
-      // 判断有依赖对象,递归解析所有依赖项
+
+    const buildMoudles = dependecies => {
       if (dependecies) {
         for (const dependency in dependecies) {
+          const result = this.build(dependecies[dependency]);
+          if (result.dependecies && Object.keys(result.dependecies).length > 0) {
+            buildMoudles(result.dependecies)
+          }
           this.modules.push(this.build(dependecies[dependency]));
         }
       }
-    });
+    }
+
+    const { dependecies } = info 
+    // 判断有依赖对象,递归解析所有依赖项
+    buildMoudles(dependecies)
+
     // 生成依赖关系图
+    // console.log('this.modules: ', this.modules);
     const dependencyGraph = this.modules.reduce(
       (graph, item) => ({
         ...graph,
@@ -39,6 +50,7 @@ class Compiler {
     const { getAst, getDependecies, getCode } = Parser;
     const ast = getAst(filename);
     const dependecies = getDependecies(ast, filename);
+    console.log('dependecies: ', dependecies);
     const code = getCode(ast);
     return {
       // 文件路径,可以作为每个模块的唯一标识符
