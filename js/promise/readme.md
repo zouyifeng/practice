@@ -75,3 +75,5 @@ promise必须提供一个then方法，来访问最终的结果，promise的then�
                 - 否则，reject promise with e as the reason
         - 如果 then 不是一个function. fulfill promise with x.
         - 如果 x 不是一个 object 或者 function，fulfill promise with x.
+
+[参考](https://promisesaplus.com/)
