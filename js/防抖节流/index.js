@@ -28,12 +28,6 @@ const throttle = (fn, wait = 50) => {
 // 节流函数原理2：第二种方法是使用定时器，比如当 scroll 事件刚触发时，打印一个 hello world，然后设置个 1000ms 的定时器，
 // 此后每次触发 scroll 事件触发回调，如果已经存在定时器，则回调不执行方法，直到定时器触发，handler 被清除，然后重新设置定时器。
 
-//
-//
-//
-//
-//
-
 // fn 是需要防抖处理的函数
 // wait 是时间间隔
 function debounce(fn, wait = 50) {
