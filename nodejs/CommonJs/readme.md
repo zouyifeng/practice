@@ -32,11 +32,5 @@ ESM vs CommonJs区别点
 后者属于运行时加载，都只有在代码运行时才能确定这些东西。ESM形式的好处是可以做到tree shaking。
 前者可以加载模块的部分内容，后者需要加载模块整个对象，再取到内容。
 
-
-nodejs调用v8层面的关键api：internalBinding
-
-os.js -> getCPU -> internalBinding('os') -> getCPU 
-
-process继承EventEmitter
-
-
+const lib = require('./lib.js')
+lib 默认是个空对象
