@@ -1,11 +1,11 @@
 ### 各种实践
  
 #### css
-* [模仿豆瓣主页](https://zouyifeng.github.io/practice/css-demo/douban/index.html?_blank)
+* [模仿豆瓣主页](./css-demo/douban)
 
 
 #### Js
-* [js继承](https://zouyifeng.github.io/practice/js/js%E7%BB%A7%E6%89%BF/index.html?_blank)
+* [js继承](./js/js继承)
 * [防抖节流](./js/防抖节流)
 * [深拷贝](./js/深拷贝)
 * [bind方法实现](./js/bind方法实现)
