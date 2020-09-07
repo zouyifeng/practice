@@ -1,0 +1,1 @@
+net创建的服务器与http服务器不同，一般用socket来执行，而http是request和response
