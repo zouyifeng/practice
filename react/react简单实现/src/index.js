@@ -1,5 +1,4 @@
-// import React from "react";
-// import ReactDOM from "react-dom";
+// babel中转换jsx，会使用到 React.createElement 这个api，无论是否使用React，都必须引入
 import React, { Component } from "./kreact";
 import ReactDOM from "./kreact-dom";
 

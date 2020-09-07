@@ -1,4 +1,6 @@
-import {createVNode} from './kvdom'
+import {
+    createVNode
+} from './kvdom'
 
 function createElement(type, props, ...children) {
     // 传递类型有三种：1-原生标签，2-函数式组件，3-class组件
@@ -14,7 +16,7 @@ function createElement(type, props, ...children) {
     if (typeof type === 'string') {
         // 原生标签，div，span
         vtype = 1;
-    } else if(typeof type === 'function') {
+    } else if (typeof type === 'function') {
         if (type.isClassComponent) {
             // 类组件
             vtype = 2;
@@ -31,13 +33,15 @@ function createElement(type, props, ...children) {
 export class Component {
     // 区分function和class组件
     static isClassComponent = true;
-    constructor(props){
+    constructor(props) {
         this.props = props;
         this.state = {};
     }
-    setState(state){
+    setState(state) {
         // ...
     }
 }
 
-export default {createElement}
+export default {
+    createElement
+}
