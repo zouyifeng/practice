@@ -28,7 +28,7 @@
 #### react 
 
 * [HOC、context、slot react实现](./react/demo)
-* [vue手动实现](./react/react简单实现)
+* [react简单实现](./react/react简单实现)
 
 #### webpack
 
