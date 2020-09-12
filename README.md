@@ -17,6 +17,7 @@
 * [学习nodejs中的RPC实现](./nodejs/RPC)
 * [IO](./nodejs/IO)
 * [EventEmitter](./nodejs/EventEmitter)
+* [模板引擎简单实现](./nodejs/template-engine)
 
 #### vue
 * [diff算法实现](./vue/diff)
