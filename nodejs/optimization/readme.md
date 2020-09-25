@@ -11,5 +11,10 @@ nodejs底层要返回http body，会将字符串转成buffer，转换成c++可�
 压测执行：ab -c50 -t15 http://localhost:4000/
 
 ![未经过优化，在中间件中读取文件](https://raw.githubusercontent.com/zouyifeng/practice/master/nodejs/optimization/docs/1.png)
+<center>未经过优化，在中间件中读取文件</center>
+
 ![优化1：将文件内容读取在启动前执行，不在中间件中执行](https://raw.githubusercontent.com/zouyifeng/practice/master/nodejs/optimization/docs/2.png)
+<center>优化1：将文件内容读取在启动前执行，不在中间件中执行</center>
+
 ![优化2：将body内容从字符串改成buffer，减去body为字符串时需计算长度的耗时操作](https://raw.githubusercontent.com/zouyifeng/practice/master/nodejs/optimization/docs/3.png)
+<center>优化2：将body内容从字符串改成buffer，减去body为字符串时需计算长度的耗时操作</center>
