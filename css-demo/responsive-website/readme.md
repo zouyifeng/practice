@@ -4,4 +4,4 @@
 
 3rem的具体距离为36px
 
-[访问地址](https://zouyifeng.github.io/practice/responsive-website/src/index.html?_blank)
+[访问地址](https://zouyifeng.github.io/practice/css-demo/responsive-website/src/index.html?_blank)
