@@ -3,6 +3,7 @@
 #### css
 * [响应式网站](./css-demo/responsive-website)
 * [模仿豆瓣主页](./css-demo/douban)
+* [移动端 1px border](./css-demo/1px-border)
 
 #### Js
 * [js继承](./js/js继承)
