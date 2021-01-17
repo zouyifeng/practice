@@ -76,7 +76,7 @@ box-shadow控制为无扩散半径，一个单位的模糊半径，以及绝对�
 
 4. change viewport
 
-![地址](https://zouyifeng.github.io/practice/css-demo/1px-border/viewport-1pxborder.html)
+[页面地址](https://zouyifeng.github.io/practice/css-demo/1px-border/viewport-1pxborder.html)
 
 5. border-image、background-image
 这两种方法依赖到图片，无法变更颜色
