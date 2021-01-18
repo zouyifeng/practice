@@ -61,12 +61,12 @@
 
 box-shadow: 属性可设置的值分别为阴影的X轴偏移量、Y轴偏移量、模糊半径（模糊）、扩散半径（实心）和颜色。
 
+
+```
 box-shadow: 0  -1px 1px -1px #e5e5e5,   //上边线
             1px  0  1px -1px #e5e5e5,   //右边线
             0  1px  1px -1px #e5e5e5,   //下边线
             -1px 0  1px -1px #e5e5e5;   //左边线
-
-```
 .box-shadow-1px {
   box-shadow: inset 0px -1px 1px -1px #000;
 }
