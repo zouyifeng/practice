@@ -1,0 +1,42 @@
+### 98. 验证二叉搜索树
+```
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+var isValidBST = function(node) {
+    let list = []
+    if (node) {
+        let stack = []
+        while(stack.length !== 0 || node) {
+            if (node) {
+                stack.push(node)
+                node = node.left
+            } else {
+                node = stack.pop()
+                list.push(node.val)
+                node = node.right
+            }
+        }
+    }
+    if (list.length === 0) {
+        return true
+    } else {
+        return list.every((val, index) => {
+            if (index > 0) {
+                return list[index-1] < list[index]
+            } else {
+                return true
+            }
+        })
+    }
+};
+```
