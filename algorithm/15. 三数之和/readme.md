@@ -56,7 +56,7 @@ var threeSum = function(nums) {
           if(j>i+1 && nums[j] === nums[j-1]) continue
           for(let k=j+1; k<len; k++) {
               if (k > j+1 && nums[k] === nums[k-1]) continue
-              if (nums[k] + nums[j] + nums[i] === 0) {
+              if (nums[k] + nums[j] + nums[i] === 0) { 
                   ret.push([nums[i] , nums[j] , nums[k]])
               }
           }
