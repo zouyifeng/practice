@@ -1,4 +1,6 @@
 ### 98. 验证二叉搜索树
+
+中序遍历
 ```
 /**
  * Definition for a binary tree node.
@@ -39,4 +41,21 @@ var isValidBST = function(node) {
         })
     }
 };
+```
+
+递归
+```
+var isValidBST = function(node) {
+  return helper(node, -Infinity, Infinity)
+};
+
+function helper (root, lower, upper) {
+  if (!root) {
+      return true
+  }
+  if (root.val <= lower || root.val >= upper) {
+      return false
+  }
+  return helper(root.left, lower, root.val) && helper(root.right, root.val, upper)
+}
 ```
