@@ -36,5 +36,5 @@
 * [webpack实现](./webpack/webpack实现)
 
 #### algorithm
-* [二叉树](./algorithm/二叉树)
-* [算法](./algorithm/算法)
+* [二叉树及其遍历方法](./algorithm/二叉树)
+* [常见算法](./algorithm/算法)
