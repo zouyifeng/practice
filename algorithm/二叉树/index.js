@@ -128,7 +128,7 @@ var postOrderUnRec = function (node) {
 postOrderUnRec(tree);
 console.log('后序遍历', postListUnRec);
 
-// 广度遍历
+// 广度遍历（队列）
 var breadthList = []; //定义保存广度遍历结果的数组
 var breadthTraversal = function (node) {
   if (node) { //判断二叉树是否为空
@@ -143,6 +143,39 @@ var breadthTraversal = function (node) {
 }
 breadthTraversal(tree);
 console.log('广度遍历', breadthList);
+
+
+// 深度遍历（递归）
+function deepTraversal(node, nodeList) { 
+  if (node)
+  { 
+    nodeList.push(node)
+    let children = node.children
+    for (let i = 0; i < children.length; i++)
+    { 
+      deepTraversal(children[i], nodeList)
+    }
+  }
+  return nodeList
+}
+
+// 深度遍历（栈）
+function deepTraversal(node) {
+  let nodeList = []
+  if (node) {
+    let stack = []
+    stack.push(node)
+    while(stack.length !== 0) {
+      let childrenItem = stack.pop()
+      nodeList.push(childrenItem)
+      let childrenList = childrenItem.children
+      for (let i = childrenList.length-1; i >= 0; i--) {
+        stack.push(childrenList[i])
+      }
+    }
+  }
+  return nodeList
+}
 
 // 翻转二叉树
 ;(function () {
