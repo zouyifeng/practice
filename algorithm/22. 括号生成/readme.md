@@ -25,3 +25,5 @@ var generateParenthesis = function(n) {
   }
 };
 ```
+
+> 剪枝是搜索中常用的优化操作
