@@ -23,9 +23,7 @@ let findKthLargest = function(nums, k) {
   while (i < k) {
     heap.push(nums[i++])
   }
-  console.log(heap)
   buildHeap(heap, 1)
-  console.log(heap)
 
   for (let i = k; i < nums.length; i++) {
     if (nums[i] > heap[1]) {
