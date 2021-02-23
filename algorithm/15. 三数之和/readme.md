@@ -98,24 +98,27 @@ var threeSum = function (nums) {
  * @param {number[]} nums
  * @return {number[][]}
  */
-var threeSum = function(nums) {
+var threeSum = function (nums) {
   let ret = []
   const len = nums.length
-  nums.sort((a, b) => a-b)
- let map = {}
- for (let i = 0; i<len; i++) {
-     map[nums[i]] = i
- }
-  for (let i = 0; i<len; i++) {
-      if (nums[i] > 0) break
-      if (i>0 && nums[i] === nums[i-1]) continue
-      for(let j=i+1; j<len; j++) {
-        if(j>i+1 && nums[j] === nums[j-1]) continue
-        const a = -1*(nums[i] + nums[j])
-        if (map[a] !== undefined && map[a] >= j+1) {
-            ret.push([nums[i] , nums[j], a])
-        }
+  nums.sort((a, b) => a - b)
+  let map = {}
+  // 生成map，key为值，序号为value
+  for (let i = 0; i < len; i++) {
+    map[nums[i]] = i
+  }
+  for (let i = 0; i < len; i++) {
+    // 如果i元素为正数，则无需继续。因为三数之和肯定为正数
+    if (nums[i] > 0) break
+    if (i > 0 && nums[i] === nums[i - 1]) continue
+    for (let j = i + 1; j < len; j++) {
+      if (j > i + 1 && nums[j] === nums[j - 1]) continue
+      const a = -1 * (nums[i] + nums[j])
+      // 确保j+1的位置
+      if (map[a] !== undefined && map[a] >= j + 1) {
+        ret.push([nums[i], nums[j], a])
       }
+    }
   }
   return ret
 }
