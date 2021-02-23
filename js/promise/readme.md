@@ -20,7 +20,7 @@ Promise 必须处于以下三个状态之一: pending, fulfilled 或者是 rejec
     - 如果promise在rejected状态 
         - 不会变成其它状态 
         - 必须有一个promise被reject的reason
-    - 概括即是:promise的状态只能从pending变成fulfilled，或者从pending变成rejected.promise成功，有成功的value.promise失败的话，有失败的原因
+    - 概括即是:promise的状态只能从pending变成fulfilled，或者从pending变成rejected。promise成功，有成功的value。promise失败的话，有失败的原因
 
 
 2. then方法

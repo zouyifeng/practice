@@ -4,6 +4,8 @@ const server = net.createServer((socket) => {
 
     let oldBuffer = null;
     socket.on('data', function (buffer) {
+        console.log(1);
+        console.log('oldBuffer: ', oldBuffer);
         // 把上一次data事件使用残余的buffer接上来
         if (oldBuffer) {
             buffer = Buffer.concat([oldBuffer, buffer]);
@@ -79,6 +81,7 @@ function decode(buffer) {
  * @param {} buffer 
  */
 function checkComplete(buffer) {
+    console.log('buffer: ', buffer.length);
     if (buffer.length < 6) {
         return 0;
     }

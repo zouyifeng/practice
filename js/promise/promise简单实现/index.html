@@ -51,12 +51,12 @@
         if (typeof onFufilled === 'function') {
           // resolve函数队列
           this.fulfilledCbs.push(onFufilled)
-          console.log(this.fulfilledCbs)
+          // console.log(this.fulfilledCbs)
         }
         if (typeof onRejected === 'function') {
           // reject函数队列
           this.rejectCbs.push(onRejected)
-          console.log(this.rejectCbs)
+          // console.log(this.rejectCbs)
         }
         // 返回当前this实例，可以使得链式调用
         return this
@@ -88,7 +88,7 @@
     }
 
     let promise = new KPromise((resolve, reject) => {
-      if (2 < 1) {
+      if (0 < 1) {
         resolve('hi')
       } else {
         reject('出错了')

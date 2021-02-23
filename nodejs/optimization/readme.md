@@ -19,3 +19,13 @@ nodejs底层要返回http body，会将字符串转成buffer，转换成c++可�
 优化2：将body内容从字符串改成buffer，减去body为字符串时需计算长度的耗时操作
 ![优化2：将body内容从字符串改成buffer，减去body为字符串时需计算长度的耗时操作](https://raw.githubusercontent.com/zouyifeng/practice/master/nodejs/optimization/docs/3.png)
 
+
+
+内存优化管理
+新生代
+  容量小，垃圾回收快
+老生代
+  容量大，垃圾回收慢
+
+nodejs buffer内存分配策略：8kb界限  buffer ->  c++ new Char[] 8kb 内存分配
+节省内存最好的方式：使用池
