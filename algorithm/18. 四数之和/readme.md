@@ -8,6 +8,7 @@ https://leetcode-cn.com/problems/4sum/
  * @param {number} target
  * @return {number[][]}
  */
+// 原理与三数之和相同，多一层循环
 var fourSum = function(nums, target) {
     const len = nums.length
     let ans = []
