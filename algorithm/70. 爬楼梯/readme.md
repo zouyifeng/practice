@@ -24,7 +24,8 @@ var climbStairs = function(n) {
 };
 ```
 
-类似斐波那契数列，递归求解（超时）
+类似斐波那契数列，递归求解（超时），递归存在大量重复计算，需要缓存部分计算结果，空间换时间
+![img](../docs/递归低效.png)
 ```
 /**
  * @param {number} n
@@ -34,5 +35,42 @@ var climbStairs = function(n) {
 var climbStairs = function(n) {
     if (n === 0 || n === 1 || n === 2) return n
     return climbStairs(n-1) + climbStairs(n-2)
+};
+```
+
+
+
+尾递归优化（原理与变量替换相同）  // TODO 原理理解与普通递归区别
+```
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    return climb(n, 0, 1)
+};
+
+function climb(n, s1, s2) {
+    if (n === 0) {
+        return s2
+    }
+    return climb(n-1, s2, s1+s2)
+}
+```
+
+变量替换
+```
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    let i = 0, j = 1, sum = 0
+    for (let p = 0; p < n; p++) {
+        sum = i + j
+        i = j
+        j = sum
+    }
+    return sum
 };
 ```
