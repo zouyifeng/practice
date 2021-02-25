@@ -74,3 +74,31 @@ var climbStairs = function(n) {
     return sum
 };
 ```
+
+ 尾递归，进入下一个函数不再需要上一个函数的环境了，得出结果以后直接返回。
+ 非尾递归，下一个函数结束以后此函数还有后续，所以必须保存本身的环境以供处理返回值。
+ [递归和尾递归的区别和原理](https://blog.csdn.net/zcyzsy/article/details/77151709)
+```
+// 递归求阶乘
+function fact(n) {
+  if (n < 0)
+    return 0;
+  else if(n == 0 || n == 1)
+    return 1;
+  else
+    return n * fact(n - 1);
+}
+
+// 尾递归求阶乘
+function facttail(n, res)
+{
+  if (n < 0)
+    return 0;
+  else if(n == 0)
+    return 1;
+  else if(n == 1)
+    return res;
+  else
+    return facttail(n - 1, n*res);
+}
+```
