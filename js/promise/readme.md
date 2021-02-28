@@ -8,22 +8,24 @@
 > 要求
 
 1. Promise States
+
 Promise 必须处于以下三个状态之一: pending, fulfilled 或者是 rejected
 
     - 如果promise在pending状态 
         - 可以变成 fulfilled 或者是 rejected
 
     - 如果promise在fulfilled状态 
-        - 不会变成其它状 
+        - 不会变成其它状态 
         - 必须有一个value值
 
     - 如果promise在rejected状态 
         - 不会变成其它状态 
         - 必须有一个promise被reject的reason
-    - 概括即是:promise的状态只能从pending变成fulfilled，或者从pending变成rejected。promise成功，有成功的value。promise失败的话，有失败的原因
+    - 概括即是: promise的状态只能从pending变成fulfilled，或者从pending变成rejected。promise成功，有成功的value。promise失败的话，有失败的原因
 
 
 2. then方法
+
 promise必须提供一个then方法，来访问最终的结果，promise的then方法接收两个参数，promise.then(onFulfilled, onRejected)
 
     - onFulfilled 和 onRejected 都是可选参数
@@ -49,12 +51,14 @@ promise必须提供一个then方法，来访问最终的结果，promise的then�
         - 如果promise变成了 rejected态，所有的onRejected回调都需要按照then的顺序执行
 
     - then必须返回一个promise promise2 = promise1.then(onFulfilled, onRejected); 
-        - onFulfilled 或 onRejected 执行的结果为x,调用 resolvePromise 
-        - 如果 onFulfilled 或者 onRejected 执行时抛出异常e,promise2需要被reject 
+        - onFulfilled 或 onRejected 执行的结果为x, 调用 resolvePromise 
+        - 如果 onFulfilled 或者 onRejected 执行时抛出异常e, promise2需要被reject 
         - 如果 onFulfilled 不是一个函数，promise2 以promise1的值fulfilled 
         - 如果 onRejected 不是一个函数，promise2 以promise1的reason rejected
 
-3. resolvePromise，resolvePromise(promise2, x, resolve, reject)
+3. Promise解决过程
+
+    resolvePromise(promise2, x, resolve, reject)
 
     - 如果 promise2 和 x 相等，那么 reject promise with a TypeError
 
