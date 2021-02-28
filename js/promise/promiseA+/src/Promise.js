@@ -12,8 +12,7 @@
  * 8. promise 可以then多次，promise 的then 方法返回一个 promise
  * 9. 如果 then 返回的是一个结果，那么就会把这个结果作为参数，传递给下一个then的成功的回调(onFulfilled)
  * 10. 如果 then 中抛出了异常，那么就会把这个异常作为参数，传递给下一个then的失败的回调(onRejected)
- * 11.如果 then 返回的是一个promise，那么会等这个promise执行完，promise如果成功，
- *   就走下一个then的成功，如果失败，就走下一个then的失败
+ * 11. 如果 then 返回的是一个promise，那么会等这个promise执行完，promise如果成功，就走下一个then的成功，如果失败，就走下一个then的失败
  */
 
 const PENDING = 'pending';
@@ -103,7 +102,7 @@ Promise.prototype.then = function (onFulfilled, onRejected) {
     });
     return promise2;
 }
-
+// 处理then函数中 参数函数执行后的返回值
 function resolvePromise(promise2, x, resolve, reject) {
     let self = this;
     //PromiseA+ 2.3.1
@@ -111,25 +110,25 @@ function resolvePromise(promise2, x, resolve, reject) {
         reject(new TypeError('Chaining cycle'));
     }
     if (x && typeof x === 'object' || typeof x === 'function') {
-        let used; //PromiseA+2.3.3.3.3 只能调用一次
+        let used; //PromiseA+ 2.3.3.3.3 只能调用一次
         try {
             let then = x.then;
             if (typeof then === 'function') {
-                //PromiseA+2.3.3
+                //PromiseA+ 2.3.3
                 then.call(x, (y) => {
                     //PromiseA+2.3.3.1
                     if (used) return;
                     used = true;
                     resolvePromise(promise2, y, resolve, reject);
                 }, (r) => {
-                    //PromiseA+2.3.3.2
+                    //PromiseA+ 2.3.3.2
                     if (used) return;
                     used = true;
                     reject(r);
                 });
 
-            }else{
-                //PromiseA+2.3.3.4
+            } else {
+                //PromiseA+ 2.3.3.4
                 if (used) return;
                 used = true;
                 resolve(x);
