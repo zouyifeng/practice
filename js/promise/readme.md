@@ -58,7 +58,7 @@ promise必须提供一个then方法，来访问最终的结果，promise的then�
 
 3. Promise解决过程
 
-    resolvePromise(promise2, x, resolve, reject)
+    resolvePromise(promise2, x, resolve, reject)  resolvePromise函数即为根据x的值来决定promise2的状态的函数
 
     - 如果 promise2 和 x 相等，那么 reject promise with a TypeError
 
@@ -80,4 +80,7 @@ promise必须提供一个then方法，来访问最终的结果，promise的then�
         - 如果 then 不是一个function. fulfill promise with x.
         - 如果 x 不是一个 object 或者 function，fulfill promise with x.
 
-[参考](https://promisesaplus.com/)
+[标准参考](https://promisesaplus.com/)
+
+
+[规范解读](https://zhuanlan.zhihu.com/p/21834559)
