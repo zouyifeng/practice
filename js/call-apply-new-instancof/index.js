@@ -42,5 +42,11 @@ Function.prototype.bind = function (context) {
   }
 }
 
-
-
+// 参数为 函数
+function create() {
+  let obj = {}
+  let Constuctor = [].shift.call(arguments)
+  obj.__proto__ = Constuctor.prototype
+  let result = Constuctor.call(obj, arguments)
+  return result instanceof Object ? result : obj
+}
