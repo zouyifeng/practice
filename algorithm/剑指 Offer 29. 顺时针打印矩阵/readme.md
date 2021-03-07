@@ -2,7 +2,7 @@
 
 https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/
 
-```
+```js
 /**
  * @param {number[][]} matrix
  * @return {number[]}

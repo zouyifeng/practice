@@ -9,7 +9,7 @@ https://leetcode-cn.com/problems/powx-n/
 大问题化为子问题，x^n化为算x^n/2，x^n/2化为算x^n/4
 
 递归 + 分治
-```
+```js
 /**
  * @param {number} x
  * @param {number} n

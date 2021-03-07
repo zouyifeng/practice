@@ -1,6 +1,6 @@
 ### 485. 最大连续 1 的个数
 
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number}

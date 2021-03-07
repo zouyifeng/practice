@@ -1,6 +1,6 @@
 ### 232.
 
-```
+```js
 /**
  * Initialize your data structure here.
  */

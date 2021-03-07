@@ -1,6 +1,6 @@
 ### 349. 两个数组的交集
 
-```
+```js
 /**
  * @param {number[]} nums1
  * @param {number[]} nums2

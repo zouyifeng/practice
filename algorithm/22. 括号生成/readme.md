@@ -1,7 +1,7 @@
 ### 22. 括号生成
 
 递归搜索（深度优先搜索） + 剪枝  时间复杂度 o(2^n)
-```
+```js
 /**
  * @param {number} n
  * @return {string[]}
@@ -33,7 +33,7 @@ var generateParenthesis = function(n) {
 ```
 
 递归搜索（深度优先搜索）+ 去掉不合法的  时间复杂度o(2^2n)
-```
+```js
 var generateParenthesis = function(n) {
     let ret = []
     gen(0, 0, n, '')

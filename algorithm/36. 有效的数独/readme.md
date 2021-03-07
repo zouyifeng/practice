@@ -7,7 +7,7 @@ https://leetcode-cn.com/problems/valid-sudoku/
 
 方块用parseInt(i/3)，parseInt(j/3)来记录   0，1，2 -> 0    3，4，5 -> 1   6，7，8 -> 2
 
-```
+```js
 /**
  * @param {character[][]} board
  * @return {boolean}

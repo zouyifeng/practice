@@ -1,7 +1,7 @@
 ### 20. 有效的括号
 
 栈
-```
+```js
 /**
  * @param {string} s
  * @return {boolean}
@@ -37,7 +37,7 @@ var isValid = function(s) {
 ```
 
 
-```
+```js
 /**
  * @param {string} s
  * @return {boolean}

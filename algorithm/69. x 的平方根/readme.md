@@ -1,6 +1,6 @@
 ### 69. x 的平方根
 
-```
+```js
 /**
  * @param {number} x
  * @return {number}

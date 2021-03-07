@@ -1,7 +1,7 @@
 ### 51. N 皇后
 
 回溯 + 剪枝 
-```
+```js
 /**
  * @param {number} n
  * @return {string[][]}

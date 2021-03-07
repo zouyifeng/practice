@@ -1,7 +1,7 @@
 ### 208. 实现 Trie (前缀树)
 
 字典树
-```
+```js
 var Trie = function() {
     this.h = {}
 };

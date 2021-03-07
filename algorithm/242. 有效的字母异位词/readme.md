@@ -2,7 +2,7 @@
 
 思路一 排序对比
 
-```
+```js
 /**
  * @param {string} s
  * @param {string} t

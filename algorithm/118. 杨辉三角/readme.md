@@ -1,7 +1,7 @@
 ### 118. 杨辉三角
 
 暴力
-```
+```js
 /**
  * @param {number} numRows
  * @return {number[][]}

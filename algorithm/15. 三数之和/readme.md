@@ -3,7 +3,7 @@
 https://leetcode-cn.com/problems/3sum/
 
 二分思想
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number[][]}
@@ -57,7 +57,7 @@ var threeSum = function(nums) {
 
 
 暴力
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number[][]}
@@ -93,7 +93,7 @@ var threeSum = function (nums) {
 
 
 哈希表 + 循环  a+b = -c
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number[][]}

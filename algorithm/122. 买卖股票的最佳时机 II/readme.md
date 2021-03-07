@@ -2,7 +2,7 @@
 
 
 贪心策略：每个子问题的最优解，就是总问题的最优解
-```
+```js
 /**
  * @param {number[]} prices
  * @return {number}
@@ -33,9 +33,9 @@ var maxProfit = function(prices) {
 ```
 
 深度优先
-```
+```js
 ```
 
 动态规划 
-```
+```js
 ```

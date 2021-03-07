@@ -3,9 +3,7 @@
 https://leetcode-cn.com/problems/maximum-product-subarray/
 
 
-![img](../docs/顺时针打印矩阵.png) 
-
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number}

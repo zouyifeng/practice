@@ -3,7 +3,7 @@
 
 暴力
 
-```
+```js
 var maxSlidingWindow = function(nums, k) {
     const length = nums.length;
     let ret = []
@@ -16,7 +16,7 @@ var maxSlidingWindow = function(nums, k) {
 
 
 双端队列
-```
+```js
 /**
  * @param {number[]} nums
  * @param {number} k
@@ -48,7 +48,7 @@ var maxSlidingWindow = function (nums, k) {
 
 
 优先队列(大顶堆)
-```
+```js
 /**
  * @param {number[]} nums
  * @param {number} k

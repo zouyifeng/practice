@@ -1,7 +1,7 @@
 ### 98. 验证二叉搜索树
 
 中序遍历
-```
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -44,7 +44,7 @@ var isValidBST = function(node) {
 ```
 
 递归
-```
+```js
 var isValidBST = function(node) {
   return helper(node, -Infinity, Infinity)
 };

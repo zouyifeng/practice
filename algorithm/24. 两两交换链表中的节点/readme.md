@@ -1,6 +1,6 @@
 ### swap-nodes-in-pairs 24. 两两交换链表中的节点  
 
-```
+```js
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

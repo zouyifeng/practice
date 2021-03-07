@@ -1,6 +1,6 @@
 ### 235. 二叉搜索树的最近公共祖先
 
-```
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {

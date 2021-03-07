@@ -2,7 +2,7 @@
 
 与`51. N 皇后`类似
 
-```
+```js
 var totalNQueens = function(n) {
   let result = []
   let cols = new Set()

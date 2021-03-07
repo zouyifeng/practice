@@ -9,7 +9,7 @@
 状态转移方程：f(x) = f(x-1) + f(x-1)
 
 
-```
+```js
 /**
  * @param {number} n
  * @return {number}
@@ -26,7 +26,7 @@ var climbStairs = function(n) {
 
 类似斐波那契数列，递归求解（超时），递归存在大量重复计算，需要缓存部分计算结果，空间换时间
 ![img](../docs/递归低效.png)
-```
+```js
 /**
  * @param {number} n
  * @return {number}
@@ -41,7 +41,7 @@ var climbStairs = function(n) {
 
 
 尾递归优化（原理与变量替换相同）  // TODO 原理理解与普通递归区别
-```
+```js
 /**
  * @param {number} n
  * @return {number}
@@ -59,7 +59,7 @@ function climb(n, s1, s2) {
 ```
 
 变量替换
-```
+```js
 /**
  * @param {number} n
  * @return {number}
@@ -78,7 +78,7 @@ var climbStairs = function(n) {
 - 尾递归，进入下一个函数不再需要上一个函数的环境了，得出结果以后直接返回。
 - 非尾递归，下一个函数结束以后此函数还有后续，所以必须保存本身的环境以供处理返回值。
 - [递归和尾递归的区别和原理](https://blog.csdn.net/zcyzsy/article/details/77151709)
-```
+```js
 // 递归求阶乘
 function fact(n) {
   if (n < 0)

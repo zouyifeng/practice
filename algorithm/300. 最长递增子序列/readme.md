@@ -1,7 +1,7 @@
 ### 300. 最长递增子序列
 
 动态规划
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number}

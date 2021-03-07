@@ -1,6 +1,6 @@
 ### 169. 多数元素
 map
-```
+```js
 /**
  * @param {number[]} nums
  * @return {number}

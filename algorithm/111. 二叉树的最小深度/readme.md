@@ -2,7 +2,7 @@
 
 
 BFS
-```
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
@@ -42,6 +42,6 @@ var minDepth = function(root) {
 ```
 
 DFS
-```
+```js
 // TODO
 ```

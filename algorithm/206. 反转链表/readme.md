@@ -1,6 +1,6 @@
 ### reverse-linked-list 206.翻转链表
 
-```
+```js
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {

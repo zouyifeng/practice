@@ -2,7 +2,7 @@
 
 
 BFS
-```
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -42,6 +42,6 @@ var levelOrder = function(root) {
 ```
 
 DFS
-```
+```js
 // TODO
 ```

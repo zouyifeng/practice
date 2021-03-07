@@ -1,7 +1,7 @@
 121. 买卖股票的最佳时机
 
 暴力法
-```
+```js
 /**
  * @param {number[]} prices
  * @return {number}
@@ -23,7 +23,7 @@ var maxProfit = function(prices) {
 ```
 
 动态规划
-```
+```js
 /**
  * @param {number[]} prices
  * @return {number}
@@ -51,7 +51,7 @@ var maxProfit = function(prices) {
 ```
 
 动态规划
-```
+```js
 /*
  * @param {number[]} prices
  * @return {number}
@@ -60,7 +60,9 @@ var maxProfit = function(prices) {
   let max = 0, min = prices[0]
   for (let i = 1; i < prices.length; i++)
   {
+    // 每一天与过去的最低点相比较。记录下 最大间距
     max = Math.max(max, prices[i] - min)
+    // 不断记录最低点
     min = Math.min(min, prices[i])
   }
   return max

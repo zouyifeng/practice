@@ -1,6 +1,6 @@
 ### 79. 单词搜索
 
-```
+```js
 var exist = function(board, word) {
     const h = board.length, w = board[0].length;
     const directions = [[0, 1], [0, -1], [1, 0], [-1, 0]];

@@ -1,5 +1,5 @@
 ### 120. 三角形最小路径和
-```
+```js
 /**
  * @param {number[][]} triangle
  * @return {number}

@@ -7,7 +7,7 @@ https://leetcode-cn.com/problems/kth-largest-element-in-an-array/
 
 #### 暴力排序
 排序，取第k个元素
-```
+```js
 let findKthLargest = function(nums, k) {
     // 倒序排列
     nums.sort((a, b) => b - a)
@@ -16,7 +16,7 @@ let findKthLargest = function(nums, k) {
 ```
 
 取前k个元素，建小顶堆。堆顶依次与k到数组末尾元素对比，如果堆顶元素更小，则替换，再堆化。
-```
+```js
 let findKthLargest = function(nums, k) {
   let heap = [, ],
     i = 0

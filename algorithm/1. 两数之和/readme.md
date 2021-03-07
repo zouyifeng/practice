@@ -3,7 +3,7 @@
 https://leetcode-cn.com/problems/two-sum/
 
 暴力
-```
+```js
 /**
  * @param {number[]} nums
  * @param {number} target
@@ -22,7 +22,7 @@ var twoSum = function(nums, target) {
 ```
 
 哈希表
-```
+```js
 /**
  * @param {number[]} nums
  * @param {number} target

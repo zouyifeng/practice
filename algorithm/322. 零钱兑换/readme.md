@@ -1,7 +1,7 @@
 ### 322. 零钱兑换
 
 dp
-```
+```js
 /**
  * @param {number[]} coins
  * @param {number} amount

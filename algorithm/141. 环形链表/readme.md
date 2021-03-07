@@ -4,7 +4,7 @@
 · 思路二 遍历链表并用利用set存放链表节点，如果发现存在相同节点（地址相同），则为有环
 · 思路三 快慢指针，如下。如果指针能够相遇，则表示有环
 
-```
+```js
 /**
  * Definition for singly-linked list.
  * function ListNode(val) {

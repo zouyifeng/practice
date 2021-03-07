@@ -2,7 +2,7 @@
 
 https://leetcode-cn.com/problems/4sum/
 
-```
+```js
 /**
  * @param {number[]} nums
  * @param {number} target
