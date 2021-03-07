@@ -12,6 +12,7 @@
 * [bind方法实现](./js/bind方法实现)
 * [js继承](./js/js继承)
 * [promise](./js/promise)
+* [设计模式](./js/设计模式)
 
 ### nodejs
 * [CommonJs](./nodejs/CommonJs)
