@@ -1,0 +1,119 @@
+<mxfile host="app.diagrams.net" modified="2021-03-11T01:25:47.969Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36" etag="PNrl0jiC8N5f5JUuUVC3" version="14.4.6" type="github">
+  <diagram id="QQnZontSI0a8TbshVgB7" name="第 1 页">
+    <mxGraphModel dx="733" dy="857" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-1" target="DUNN81t9_R1kpG2zzdLx-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-1" value="x == y" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-3" target="DUNN81t9_R1kpG2zzdLx-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="260" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-3" value="x和y是否类型相同" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="45" y="300" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-5" value="x === y" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-7" target="DUNN81t9_R1kpG2zzdLx-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-7" target="DUNN81t9_R1kpG2zzdLx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-7" value="null == undefined" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="300" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-9" value="true" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-11" target="DUNN81t9_R1kpG2zzdLx-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-11" target="DUNN81t9_R1kpG2zzdLx-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-11" value="string == number" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="300" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-12">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-12" value="string 转 number" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-15" value="Y" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="390" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-16" value="N" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="350" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-17" value="Y" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="390" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-18" value="N" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="340" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-19" target="DUNN81t9_R1kpG2zzdLx-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-19" target="DUNN81t9_R1kpG2zzdLx-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-19" value="boolean == any" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="300" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="745" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-20" value="bool 转 number" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="685" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-23" value="Y" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="390" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-24" value="N" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="350" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-25" target="DUNN81t9_R1kpG2zzdLx-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1040" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-25" value="object == string or symbol" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="850" y="300" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DUNN81t9_R1kpG2zzdLx-26">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="915" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-26" value="object 转基本类型" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-31" value="false" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="310" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DUNN81t9_R1kpG2zzdLx-47" value="继续判断 x 和 y 是否类型相同" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="525" width="490" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
