@@ -28,6 +28,9 @@ var climbStairs = function(n) {
 ```
 
 类似斐波那契数列，递归求解（超时），递归存在大量重复计算，需要缓存部分计算结果，空间换时间
+
+[斐波那契数列优化](https://zhuanlan.zhihu.com/p/108269159)
+
 ![img](../docs/递归低效.png)
 ```js
 /**
@@ -39,6 +42,25 @@ var climbStairs = function(n) {
     if (n === 0 || n === 1 || n === 2) return n
     return climbStairs(n-1) + climbStairs(n-2)
 };
+
+
+// 以上递归求解会超时，因为存在大量重复计算。可以将计算的结果缓存一起，大大减少耗时
+/**
+ * @param {number} n
+ * @return {number}
+ */
+const map = new Map()
+map.set(0, 0)
+map.set(1, 1)
+map.set(2, 2)
+
+var climbStairs = function(n) {
+    if (typeof map.get(n) === 'number') return map.get(n)
+    ret = climbStairs(n-1) + climbStairs(n-2)
+    map.set(n, ret)
+    return ret
+};
+
 ```
 
 
