@@ -4,14 +4,14 @@ https://leetcode-cn.com/problems/lru-cache/
 
 
 Least Recently Used 缓存替换算法
-[lru](./lru.png)
+![lru](./lru.png)
 
 O(1) 查询
 O(1) 修改、更新
 
 
 Least Frequently Used
-[lfu](./lfu.png)
+![lfu](./lfu.png)
 与LRU相比较，多了访问次数排序
 
 ```js
