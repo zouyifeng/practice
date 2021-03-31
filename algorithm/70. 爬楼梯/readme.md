@@ -29,7 +29,7 @@ var climbStairs = function(n) {
 
 类似斐波那契数列，递归求解（超时），递归存在大量重复计算，需要缓存部分计算结果，空间换时间
 
-[斐波那契数列优化](https://zhuanlan.zhihu.com/p/108269159)
+[斐波那契数列递归求解的优化](https://zhuanlan.zhihu.com/p/108269159)
 
 ![img](../docs/递归低效.png)
 ```js
