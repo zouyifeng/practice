@@ -1,5 +1,7 @@
 ### 22. 括号生成
 
+https://leetcode-cn.com/problems/generate-parentheses/
+
 递归搜索（深度优先搜索） + 剪枝  时间复杂度 o(2^n)
 ```js
 /**
