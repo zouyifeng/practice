@@ -9,7 +9,7 @@
 * [js继承](./js/js继承)
 * [防抖节流](./js/防抖节流)
 * [深拷贝](./js/深拷贝)
-* [bind方法实现](./js/bind方法实现)
+* [call、apply、bind、instanceof实现](./js/call-apply-new-instancof/readme.md)
 * [promise](./js/promise)
 * [设计模式](./js/设计模式)
 
