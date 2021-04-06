@@ -42,11 +42,28 @@ Function.prototype.bind = function (context) {
   }
 }
 
-// 参数为 函数
+// 模拟new 参数为 构造函数
+// 1、新生成了一个对象
+// 2、链接到原型
+// 3、绑定 this
+// 4、返回新对象
 function create() {
   let obj = {}
   let Constuctor = [].shift.call(arguments)
   obj.__proto__ = Constuctor.prototype
   let result = Constuctor.call(obj, arguments)
   return result instanceof Object ? result : obj
+}
+
+// 实现instanceof
+function myInstanceof(left, right) {
+  let prototype = right.prototype
+  left = left.__proto__
+  while (true) {
+    if (left === null || left === undefined)
+      return false
+    if (prototype === left)
+      return true
+    left = left.__proto__
+  }
 }
