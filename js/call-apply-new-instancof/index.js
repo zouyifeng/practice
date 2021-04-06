@@ -47,11 +47,15 @@ Function.prototype.bind = function (context) {
 // 2、链接到原型
 // 3、绑定 this
 // 4、返回新对象
+
 function create() {
   let obj = {}
   let Constuctor = [].shift.call(arguments)
   obj.__proto__ = Constuctor.prototype
   let result = Constuctor.call(obj, arguments)
+  // new规则
+  // 若构造函数中返回this或返回值是基本类型（number、string、boolean、null、undefined）的值，则返回新实例对象； 
+  // 若返回值是引用类型的值，则实际返回值为这个引用类型。
   return result instanceof Object ? result : obj
 }
 
