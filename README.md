@@ -11,6 +11,7 @@
 * [深拷贝](./js/深拷贝)
 * [call、apply、bind、instanceof实现](./js/call-apply-new-instancof/readme.md)
 * [promise](./js/promise)
+* [trim](./js/trim)
 * [设计模式](./js/设计模式)
 
 ### nodejs
