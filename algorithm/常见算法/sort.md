@@ -89,6 +89,7 @@ function quickSort(arr) {
 ```
 
 #### 实现二
+[参考：js算法-快速排序(Quicksort)](https://segmentfault.com/a/1190000017814119)
 ```js
 function swap(arr, i ,j){
   const t = arr[i];
