@@ -1,6 +1,6 @@
-webpack中`output`的属性设置
+### webpack中`output`的属性设置
 
-`library`: 指定库的全局变量
+`library`: 指定库的全局变量名字
 
 `libraryTarget`: 支持库的引入方式
 
@@ -10,13 +10,13 @@ webpack中`output`的属性设置
 
 
 
-webpack优化方案:
+### webpack优化方案:
 
-动态polyfill（polyfill service）
+#### 动态polyfill（polyfill service）
 ![1](./docs/1.png)
 
 
-`tree shaking`利用ES6模块的特点
+#### `tree shaking`利用ES6模块的特点
   - 只能作为模块顶层语句出现
 
   - import 模块名只是字符串常量 
