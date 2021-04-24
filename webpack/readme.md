@@ -17,13 +17,18 @@ webpack优化方案:
 
 
 `tree shaking`利用ES6模块的特点
+  - 只能作为模块顶层语句出现
 
-只能作为模块顶层语句出现
+  - import 模块名只是字符串常量 
 
-import 模块名只是字符串常量
-
-import binding 是 immutable （不可修改）
+  - import binding 是 immutable （不可修改） 
 
 cjs则不同，可动态引入，需要时引入。
 
-`tree shaking`需要静态分析出哪些代码不需要用到，而非运行时分析。在ugly时候去掉
+本质`tree shaking`需要`静态分析`出哪些代码不需要用到，而非运行时分析。在ugly时候去掉
+
+
+原理：擦出DCE (dead code elimination)
+- 代码不会被执行
+- 代码执行结果不会被用到
+- 代码只会影响死变量
