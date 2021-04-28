@@ -42,6 +42,8 @@ Function.prototype.bind = function (context) {
   }
 }
 
+// 多次bind无法更改原因，第一次bind已经将函数和执行this绑定，利用闭包形式。执行时通过内部apply传入。
+
 // 模拟new 参数为 构造函数
 // 1、新生成了一个对象
 // 2、链接到原型
