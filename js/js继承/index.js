@@ -264,3 +264,5 @@ function _inherits(subType, superType) {
 // 但是在 ES6 中类 B 继承了类 A 的属性，在 ES5 中，构造函数 B 没有继承构造函数 A 的属性，
 // ES6 B.__proto__ === A // true  ES5 B.__proto__ === Function.protoType // true
 // 这是 ES6 与 ES5 继承的第一个区别
+
+[参考](https://juejin.cn/post/6844903924015120397)
