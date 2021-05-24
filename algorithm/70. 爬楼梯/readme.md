@@ -9,7 +9,7 @@ https://leetcode-cn.com/problems/climbing-stairs/
 
 爬上 n-1阶楼梯的方法数量。因为再爬1阶就能到第n阶、爬上 n-2 阶楼梯的方法数量，因为再爬2阶就能到第n阶
 
-状态转移方程：f(x) = f(x-1) + f(x-1)
+状态转移方程：f(x) = f(x-1) + f(x-2)
 
 
 ```js
