@@ -93,7 +93,7 @@ class BinaryHeap {
       // 如果还未整理到叶子节点，则继续向下整理
       this.insertAt(parent, this.data.pop());
     } else {
-      // 当完成整理时，最后一个节点即为多于元素，直接弹出数组即可
+      // 当完成整理时，最后一个节点即为多余元素，直接弹出数组即可
       this.data.pop();
     }
 
