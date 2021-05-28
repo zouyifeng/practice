@@ -19,7 +19,7 @@ class BinaryHeap {
     this.insertAt(this.data.length, value);
   }
 
-  // 将元素插入到index位置
+  // 将元素插入到index位置 内部调用，index为data.length
   insertAt(index, value) {
     // 先将元素插入到指定的位置
     this.data[index] = value;
