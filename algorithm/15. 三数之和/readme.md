@@ -39,7 +39,7 @@ var threeSum = function(nums) {
           // 左指针元素和左+1指针元素相同，左指针左移
           while (L < R && nums[L] === nums[L + 1]) L++;
           // 右指针和右-1指针元素相同，右指针右移
-          while (L < R && nums[R] === R - 1) R--;
+          while (L < R && nums[R] === nums[R - 1]) R--;
           // 常规指针移动
           L++;
           R--;
