@@ -57,5 +57,85 @@ function swap(items, i, j) {
 }
 ```
 
+#### 构建堆
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var findKthLargest = function(nums, k) {
+    const heap = new BinaryHeap((a, b) => a - b)
+    for (let i = 0; i < nums.length; i++) {
+        if(i < k) {
+            heap.insert(nums[i])
+        } else {
+            if(heap.peek() < nums[i]) {
+                heap.delete(0)
+                heap.insert(nums[i])
+            }
+        }
+    }
+    console.log(heap)
+    return heap.peek()
+};
+
+class BinaryHeap {
+    constructor(compare) {
+        this.data = []
+        this.compare = compare
+    }
+    insert(value) {
+        this.insertAt(this.data.length, value)
+    }
+    insertAt(index, value) {
+        this.data[index] = value
+        let fatherIndex 
+        while(
+            index >0 &&
+            this.compare(value, this.data[fatherIndex = Math.floor((index-1)/2)]) < 0
+        ) {
+            this.data[index] = this.data[fatherIndex]
+            this.data[fatherIndex] = value
+            index = fatherIndex
+        }
+    }
+    delete(index) {
+        let value = this.data[index]
+        let parent = index
+
+        while(parent < this.data.length) {
+            let right = parent * 2 + 2
+            let left = parent * 2 + 1
+            if (left >= this.data.length) {
+                break
+            }
+            if (right >= this.data.length) {
+                this.data[parent] = this.data[left]
+                parent = left
+                break
+            }
+            if (this.compare(this.data[left], this.data[right]) < 0 ) {
+                this.data[parent] = this.data[left]
+                parent = left
+            } else {
+                this.data[parent] = this.data[right]
+                parent = right
+            }
+        }
+
+        if (parent < this.data.length - 1) {
+            this.insertAt(parent, this.data.pop())
+        } else {
+            this.data.pop()
+        }
+        return value
+    }
+    peek() {
+        return this.data[0]
+    }
+}
+```
+
 
 
