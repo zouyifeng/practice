@@ -65,3 +65,5 @@ promise.all 中的catch，只会获得第一个throw的error
 
 #### check阶段
 poll阶段结束后立即执行回调。setImmediate的回调
+
+[参考](https://juejin.cn/post/6844903999506923528)
