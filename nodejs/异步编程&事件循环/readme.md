@@ -64,3 +64,4 @@ promise.all 中的catch，只会获得第一个throw的error
 - poll队列为空，1、如果被setImmediate设置回调，结束poll阶段，进入check阶段，执行check队列。2、无setImmediate设置回调，则阻塞在该阶段等待回调被加入 poll 队列，并立即执行。
 
 #### check阶段
+poll阶段结束后立即执行回调。setImmediate的回调
