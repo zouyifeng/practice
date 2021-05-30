@@ -30,6 +30,7 @@ setTimeout(fun, 500)，fun成为了新的事件循环调用栈的底部
 promise.all 中的catch，只会获得第一个throw的error
 
 ### 模型
+```
    ┌───────────────────────┐
 ┌─>│        timers         │
 │  └──────────┬────────────┘
@@ -48,7 +49,7 @@ promise.all 中的catch，只会获得第一个throw的error
 │  ┌──────────┴────────────┐
 └──┤    close callbacks    │
    └───────────────────────┘
-
+```
 
 #### timers 
 一个timer具有下限时间，poll阶段控制执行
