@@ -211,14 +211,12 @@ console.log(rectangle.area);
 
 // 继承
 class Square extends Rectangle {
-
   constructor(length) {
     super(length, length);
 
     // 如果子类中存在构造函数，则需要在使用“this”之前首先调用 super()。
     this.name = 'Square';
   }
-
   get area() {
     return this.height * this.width;
   }

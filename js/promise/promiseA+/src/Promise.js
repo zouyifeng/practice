@@ -128,7 +128,7 @@ function resolvePromise(promise2, x, resolve, reject) {
                 });
 
             } else {
-                //PromiseA+ 2.3.3.4
+                //PromiseA+2.3.3.4
                 if (used) return;
                 used = true;
                 resolve(x);

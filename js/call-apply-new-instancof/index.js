@@ -33,7 +33,8 @@ Function.prototype.bind = function (context) {
   const fn = this
   context = context || window
   const args = [...arguments].slice(1)
-  return function F() { 
+  return function F() {
+    // 因为返回了一个函数，可以 new F()，所以需要判断
     if (this instanceof F)
     { 
       return new fn(...args, ...arguments)
@@ -47,8 +48,9 @@ Function.prototype.bind = function (context) {
 // 模拟new 参数为 构造函数
 // 1、新生成了一个对象
 // 2、链接到原型
-// 3、绑定 this
-// 4、返回新对象
+// 3、将新对象绑定到 this 
+// 4、执行构造函数
+// 5、返回新对象
 
 function create() {
   let obj = {}
