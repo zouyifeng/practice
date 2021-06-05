@@ -1,20 +1,23 @@
-#### start
+### start
 webapck webpack.config.js
 
 
-#### point
-comipler hook
-compilation hook
+### point
+- comipler hook
+- compilation hook
 
 
-#### reference
+### reference
 [Webpack原理-编写Plugin](https://juejin.im/post/5a5c18f2518825734f52ad65)
 
 [深入Webpack-编写Loader](https://juejin.im/post/5a4f3791f265da3e3f4c7ee6)
 
 一个 Loader 的职责是单一的，只需要完成一种转换。
+
 如果一个源文件需要经历多步转换才能正常使用，就通过多个 Loader 去转换。
+
 在调用多个 Loader 去转换一个文件时，每个 Loader 会链式的顺序执行，
+
 第一个 Loader 将会拿到需处理的原内容，上一个 Loader 处理后的结果会传给下一个接着处理，最后的 Loader 将处理后的最终结果返回给 Webpack。
 
 
