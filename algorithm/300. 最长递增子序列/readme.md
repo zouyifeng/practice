@@ -13,10 +13,10 @@ var lengthOfLIS = function(nums) {
     { 
         return 0
     }
-    let dp = new Array(nums.length)
+    let dp = new Array(nums.length+1)
     dp.fill(1)
     let max = 0
-    for (let i = 0; i < nums.length; i++)
+    for (let i = 1; i < nums.length; i++)
     { 
         for (let j = 0; j < i; j++)
         {
