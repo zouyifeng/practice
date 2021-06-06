@@ -1,5 +1,7 @@
 ### 1004. 最大连续1的个数 III
 
+https://leetcode-cn.com/problems/max-consecutive-ones-iii/
+
 此题可转换理解为：包含K个0的最长序列，转换为滑动窗口问题
 
 ```js
