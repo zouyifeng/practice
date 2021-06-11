@@ -18,13 +18,13 @@ const lastTime = Date.now();
 // setTimeout
 setTimeout(() => {
   console.log('timers', Date.now() - lastTime + 'ms');
-}, 3);
+}, 100);
 
 // process.nextTick
 process.nextTick(() => {
   // 进入event loop
   // timers阶段之前执行
-  // wait(20);
+  wait(20);
   asyncOperation(() => {
     console.log('poll');
   });  
