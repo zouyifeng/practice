@@ -20,6 +20,10 @@
 * [IO](./nodejs/IO)
 * [EventEmitter](./nodejs/EventEmitter)
 * [模板引擎简单实现](./nodejs/template-engine)
+* [event loop](./nodejs/异步编程&事件循环)
+* [process](./nodejs/process)
+* [graphql-koa](./nodejs/graphql-koa)
+* [node优化](./nodejs/optimization)
 
 ### vue
 * [diff算法实现](./vue/diff)
@@ -35,6 +39,7 @@
 * [模拟webpack](./webpack/kkbpack)
 * [tapable学习](./webpack/tapable学习)
 * [webpack实现](./webpack/webpack实现)
+* [webpack热更新探究](./webpack/webpack-hmr)
 
 ### algorithm
 * [二叉树及其遍历方法](./algorithm/二叉树)
