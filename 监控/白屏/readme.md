@@ -9,6 +9,19 @@
 
 - `beforeunload/unload` —— 当用户正在离开页面时
 
+-  `readyState`，document.readyState有三个值
+  1. loading —— 文档正在被加载。
+  2. interactive —— 文档被全部读取。
+  3. complete —— 文档被全部读取，并且所有资源（例如图片等）都已加载完成。
+
+
+`readystatechange` 事件是跟踪文档加载状态的另一种机制
+
+
+在 DOMContentLoaded 之前，document.readyState 会立即变成 interactive。它们俩的意义实际上是相同的。
+
+complete 状态的意义与 window.onload 相同
+
 
 `DOMContentLoaded` 必须等待脚本执行结束才发生
 
