@@ -62,7 +62,7 @@ module.exports = {
 
 ![hmr](./docs/hmr.png)
 
-`hmr runtime`和`hmr server`的形式连接
+`hmr runtime`和`hmr server`以websocket形式连接
 
 启动：1 -> 2 -> A -> B
 发生变化：1 -> 2 -> 3 -> 4 -> 5
