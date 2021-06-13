@@ -1,5 +1,7 @@
 ### 349. 两个数组的交集
 
+https://leetcode-cn.com/problems/intersection-of-two-arrays/
+
 ```js
 /**
  * @param {number[]} nums1
