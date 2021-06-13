@@ -32,3 +32,39 @@ cjs则不同，可动态引入，需要时引入。
 - 代码不会被执行
 - 代码执行结果不会被用到
 - 代码只会影响死变量
+
+
+#### 文件监听原理分析
+
+轮询判断文件的最后编辑时间是否变化
+
+某个文件发生了变化，并不会立即告诉监听者，先缓存起来，等待aggregateTimeout
+
+```js
+module.exports = {
+  watch: true,
+  watchOptions: {
+    // 监听到变化后会等300ms再去执行构建
+    aggregateTimeout: 300,
+    // 判断文件是否变化，是通过不停询问系统指定的文件，是否发生变化。
+    // 每秒询问1000次
+    poll: 1000
+  }
+}
+```
+
+
+### 热更新原理
+
+依赖`webpack-dev-server`和`webpack.hotModuleReplacementPlugin`
+
+不涉及磁盘的IO文件输出，存放在内存中，速度更快。
+
+![hmr](./docs/hmr.png)
+
+`hmr runtime`和`hmr server`的形式连接
+
+启动：1 -> 2 -> A -> B
+发生变化：1 -> 2 -> 3 -> 4 -> 5
+
+[详细实现](./webpack-hmr)
