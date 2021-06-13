@@ -1,5 +1,7 @@
 ### 338. 比特位计数
 
+https://leetcode-cn.com/problems/counting-bits/
+
 - i&(i-1) 移除i最低位1
 - i 比 i&(i-1) 大
 - arr[i] 1的个数比 arr[i&(i-1)] 多1
