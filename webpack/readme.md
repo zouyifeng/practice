@@ -1,16 +1,5 @@
-### webpack中`output`的属性设置
-
-`library`: 指定库的全局变量名字
-
-`libraryTarget`: 支持库的引入方式
-
-`libraryExport`: default
-
-`package.json`的`script`字段`prepublish`，调用`npm publish`会执行
 
 
-
-### webpack优化方案:
 
 #### 动态polyfill（polyfill service）
 ![1](./docs/1.png)
@@ -67,4 +56,63 @@ module.exports = {
 启动：1 -> 2 -> A -> B
 发生变化：1 -> 2 -> 3 -> 4 -> 5
 
-[详细实现](./webpack-hmr)
+[详细实现](https://github.com/zouyifeng/webpack-hmr)
+
+
+### 文件指纹
+
+![hash](./docs/hash.png)
+
+- chunkhash用法
+一般来说，针对于输出文件，我们使用chunkhash。
+
+因为webpack打包后，最终每个entry文件及其依赖会生成单独的一个js文件。
+
+此时使用chunkhash，能够保证整个打包内容的更新准确性。
+
+- contenthash用法
+对于css文件来说，一般会使用MiniCssExtractPlugin将其抽取为一个单独的css文件。
+
+类似js资源引用css资源，css用了chunkhash，如果仅js发生了变化，也会引起css文件名字的变化
+
+此时可以使用contenthash进行标记，确保css文件内容变化时，可以更新hash。
+
+- hash用法
+一般来说，没有什么机会直接使用hash。
+
+hash会更据每次工程的内容compilation进行计算，很容易造成不必要的hash变更，不利于版本管理。
+
+- file-loader的hash
+
+明明经常看到在处理一些图片，字体的file-loader的打包时，使用的是[name]_[hash:8].[ext]
+
+但是如果改了其他工程文件，比如index.js，生成的图片hash并没有变化。
+
+这里需要注意的是，file-loader的hash字段，这个loader自己定义的占位符，和webpack的内置hash字段并不一致。
+
+这里的hash是使用md4等hash算法，对文件内容进行hash。
+
+所以只要文件内容不变，hash还是会保持一致。
+
+
+### 懒加载
+
+commonjs： require.ensure
+
+es6：动态import，原理通过jsonp请求把脚本加载进来
+
+
+### webpack构建优化
+
+https://github.com/zouyifeng/geektime-webpack-course/
+
+
+### webpack构建组件库
+
+`library`: 指定库的全局变量名字  // 暴露出来库的名字
+
+`libraryTarget`: 支持库的引入方式    // var / window / global / this / umd(支持cjs, amd, esmodule, script)
+
+`libraryExport`: 'default'  // 避免使用时候频繁使用xxx.default
+
+`package.json`的`script`字段`prepublish`，调用`npm publish`会执行
