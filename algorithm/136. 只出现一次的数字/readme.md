@@ -1,0 +1,17 @@
+### 136. 只出现一次的数字
+
+https://leetcode-cn.com/problems/single-number/
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var singleNumber = function(nums) {
+    let res = nums[0]
+    for (let i = 1; i < nums.length; i++) {
+        res = res ^ nums[i]
+    }
+    return res
+};
+```
