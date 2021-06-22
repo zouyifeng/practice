@@ -3,9 +3,12 @@ const CopyrightWebpackPlugin = require("./plugins/copyright-webpack-plugin");
 const BasicPlugin = require('./plugins/basic-plugin')
 const EndWebpackPlugin = require('./plugins/end-webpack-plugin')
 
+
 module.exports = {
   mode: "development",
-  entry: "./index.js",
+  entry: {
+    app:  path.resolve(__dirname, "src/index.js")
+  },
   resolveLoader: {
     modules: ["node_modules", "./loaders"]
   },
@@ -21,7 +24,8 @@ module.exports = {
               name: "kaikeba"
             }
           }
-        ]
+        ],
+        exclude: /node_modules/
       }
     ]
   },
@@ -33,7 +37,7 @@ module.exports = {
       type: 'basic plugin option'
     }),
     new EndWebpackPlugin(msg => {
-      console.log(msg);
+      // console.log(msg);
     }, err => {
       console.log(err);
     })

@@ -3,8 +3,10 @@ import { isVirtualTextNode } from './util.js';
 
 export const renderNode = (vnode) => {
 
+
     // 是虚拟文本节点的情况下直接创建文本节点
     if (isVirtualTextNode(vnode)) {
+        // console.log('vnode: ', vnode);
         vnode.el = document.createTextNode(vnode.text);
         return vnode.el;
     }
@@ -25,12 +27,13 @@ export const renderNode = (vnode) => {
             el.setAttribute(key, attributes[key]);
         }
     } else if (typeof nodeName === 'function') {
+        console.log('nodeName1: ', nodeName, attributes);
+        
         const component = new nodeName(attributes);
         const vdom = component.render(component.props, component.state);
+        console.log('vdom: ', vdom);
         el = renderNode(vdom);
-        // 
-        // 
-
+        
         vdom.key = attributes ? attributes.key : undefined;
         vdom.el = el;
         component.el = el;
@@ -38,16 +41,20 @@ export const renderNode = (vnode) => {
     }
     // 
     (children || []).forEach(child => {
-        el.appendChild(renderNode(child));
+        el.appendChild(renderNode(child));  
     });
     return el;
 }
 
 
 export const renderComponent = (component, parent) => {
+
+    console.log(component.render);
+    console.log('component: ', component);
     
-    let rendered = component.render(component.props, component.state); //产生虚拟DOM节点
+    let unRender = component.render(component.props, component.state); //产生虚拟DOM节点
+    console.log('rendered: ', unRender);
     
     
-    patch(component.vdom, rendered);
+    patch(component.vdom, unRender);
 }

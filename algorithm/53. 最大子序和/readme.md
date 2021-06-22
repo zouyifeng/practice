@@ -37,3 +37,7 @@ var maxSubArray = function(nums) {
     return max
 }; 
 ```
+<!-- 
+制定目标，让大脑有的放矢
+不断挑战，培养游戏心态
+发现奖赏，重拾生活的小确幸 -->

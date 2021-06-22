@@ -8,7 +8,7 @@ if (cluster.isMaster) {
     const worker = cluster.fork()
     let missingPing = 0
     let inter = setInterval(() => {
-      console.log('ping');
+      // console.log('ping');
       worker.send('ping')
       missingPing++
       if(missingPing >= 3){

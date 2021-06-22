@@ -4,11 +4,11 @@ import Component from './component.js';
 
 class App extends Component {
     render() {
-        return h('div', { class: 'app' },
+        return h(
+            'div',
+            { class: 'app' },
             h('h1', null, 'Simple vDOM'),
-            h(
-                People
-            )
+            h(People)
         );
     }
 }
@@ -26,13 +26,13 @@ class People extends Component {
                 list: ['a1', 'd4', 'b2', 'c3', 'e5', 'f6']
             });
 
-            // // 第二次改变状态
+            // 第二次改变状态
             // setTimeout(() => {
             //     this.setState({
             //         list: ['e5', 'd4', 'f6', 'c3', 'a1', 'b2']
             //     })
             // }, 3000);
-        }, 2000);
+        }, 1000);
     }
     render(props, state) {
         return h(
@@ -42,8 +42,7 @@ class People extends Component {
     };
 }
 
-const render = (vnode, parent) => {
-    
+const render = (vnode, parent) => {   
     diff(null, vnode, parent);
 }
 

@@ -5,4 +5,30 @@
 
 ![webpack流程图](./webpack.png)
 
-webpack插件是具有apply方法的JavaScript对象，apply方法被compiler调用，并传入compiler实例本身。插件对compiler上的钩子绑定函数
+webpack插件是具有apply方法的JavaScript对象，apply方法被compiler调用，并传入compiler实例本身。
+
+插件对compiler上的钩子绑定函数
+
+
+```js
+class Compiler extends Tapable {
+  constructor(context) {
+    super();
+    this.hooks = {
+      /** @type {SyncBailHook<Compilation>} */
+      shouldEmit: new SyncBailHook(["compilation"]),
+      /** @type {AsyncSeriesHook<Stats>} */
+      done: new AsyncSeriesHook(["stats"]),
+      /** @type {AsyncSeriesHook<>} */
+      additionalPass: new AsyncSeriesHook([]),
+      /** @type {AsyncSeriesHook<Compiler>} */
+      ......
+      ......
+      some code
+    };
+    ......
+    ......
+    some code
+}
+```
+`compiler`继承了`Tapable`，就可以compiler.hooks.compile.tap('xxx', () => {})这样使用

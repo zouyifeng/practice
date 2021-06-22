@@ -3,10 +3,8 @@
     // 缓存
     var  installedModules  =  {};
     //  The  require  function
-    function __kkbpack_require__ (moduleId)  {
-      //  Check  if  module  is  in  cache 
-      console.log('installedModules: ', installedModules);
-      
+    function  __kkbpack_require__     (moduleId)  {
+    //  Check  if  module  is  in  cache 
     if(installedModules[moduleId])  {
       return  installedModules[moduleId].exports;
     }
@@ -18,17 +16,17 @@
     modules[moduleId].call(module.exports,  module,  module.exports, __kkbpack_require__);
     //  Flag  the  module  as  loaded 
     module.l  =  true;
-    //  Return  the  exports  of  the  module   
+    //  Return  the  exports  of  the  module 
     return  module.exports;
   }
   
   //  Load  entry  module  and  return  exports
-  return __kkbpack_require__("./src/index.js");
+  return __kkbpack_require__(__kkbpack_require__.s  =  "./src/index.js");
 }({"./src/index.js":function(module,exports,__kkbpack_require__){ eval(`#!  /usr/bin/env  node
 
-const sayHi = __kkbpack_require__("./src/a.js");
-const sayBye = __kkbpack_require__("./src/b.js");
-// __kkbpack_require__("./src/index.css")
+const sayHi = undefined;
+const sayBye = undefined;
+// undefined
 
 sayHi('kkb');
 sayBye('kkb');`)},"./src/a.js":function(module,exports,__kkbpack_require__){ eval(`module.exports = (name) => {

@@ -9,16 +9,16 @@ Server Port:            3000
 Document Path:          /
 Document Length:        264785 bytes
 
-Concurrency Level:      50
-Time taken for tests:   1.197 seconds
-Complete requests:      400
-Failed requests:        0
-Total transferred:      105954000 bytes
-HTML transferred:       105914000 bytes
-Requests per second:    334.06 [#/sec] (mean)
-Time per request:       149.675 [ms] (mean)
-Time per request:       2.993 [ms] (mean, across all concurrent requests)
-Transfer rate:          86412.89 [Kbytes/sec] received
+Concurrency Level:      50  # 并发数 
+Time taken for tests:   1.197 seconds  # 全部请求完成耗时
+Complete requests:      400  # 全部请求数
+Failed requests:        0  # 失败的请求
+Total transferred:      105954000 bytes  # 总传输大小  
+HTML transferred:       105914000 bytes  # 整个场景中的HTML内容传输量
+Requests per second:    334.06 [#/sec] (mean)   # 每秒请求数 ( 平均 )
+Time per request:       149.675 [ms] (mean)     # 每次并发请求时间 ( 所有并发 )
+Time per request:       2.993 [ms] (mean, across all concurrent requests)  # 每一请求时间 ( 并发平均 )  // 每个请求实际运行时间的平均值
+Transfer rate:          86412.89 [Kbytes/sec] received  # 传输速率  //平均每秒网络上的流量，可以帮助排除是否存在网络流量过大导致响应时间延长的问题
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
@@ -37,6 +37,7 @@ Percentage of the requests served within a certain time (ms)
   98%    220
   99%    227
  100%    235 (longest request)
+ // 整个场景中所有请求的响应情况。在场景中每个请求都有一个响应时间，其中50％的用户响应时间小于 147 毫秒，66％ 的用户响应时间小于 151 毫秒，最大的响应时间小于 227 毫秒
 ```
 
 

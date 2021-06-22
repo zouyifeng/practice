@@ -31,10 +31,13 @@ class KkbPack {
     // let fileContent = fs.readFileSync(modulePath, 'utf-8')
 
     let fileContent = this.getCode(modulePath);
+    // console.log('fileContent: ', fileContent);
     //  ./src/index.js  文件的父目录，其实就是src
     // 解析soruce源码
     const { code, deps } = this.parse(fileContent, path.dirname(name))
+    console.log('code, deps: ', code, deps);
     //  this.modules[name]  =  code
+    // console.log('name: ', name);
     this.modules[name] = `function(module,exports,__kkbpack_require__){ eval(\`${code}\`)}`
     // 递归获取依赖
     deps.forEach(dep => {
@@ -54,13 +57,14 @@ class KkbPack {
   }
   
   parse(code, parent) {
+    // console.log('code: ', code);
     let deps = []
     //  识别  require('xx')
     var r = /require\((.*)\)/g;
     code = code.replace(r, function (match, arg) {
+      // console.log('arg: ', arg);
       //  console.log(1,match,  arg.replace(/'|"/g,''))
       const retPath = path.join(parent, arg.replace(/'|"/g, '')) 
-      console.log('retPath: ', retPath);
       deps.push(retPath)
       return `__kkbpack_require__("./${retPath}")`
     })
@@ -75,6 +79,7 @@ class KkbPack {
     Object.keys(this.modules).forEach(name => {
       fnTemp += `"${name}":${this.modules[name]},`
     })
+    console.log('fnTemp: ', fnTemp);
     return fnTemp
   }
 
@@ -93,7 +98,6 @@ class KkbPack {
       const entryPath = path.resolve(this.root, this.entry) 
       this.createModule(entryPath, this.entry) 
       this.generateFile()
-
     }
 
   }

@@ -82,7 +82,8 @@ class ModuleBuildTimeCalWebpackPlugin {
 
         compilation.hooks.succeedModule.tap(
           pluginName,
-          this.handleSucceedModule.bind(this));
+          this.handleSucceedModule.bind(this)
+        );
 
         compilation.hooks.finishModules.tap(
           pluginName,
