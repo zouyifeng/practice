@@ -8,14 +8,12 @@ if (request.url === '/') {
 }
 ```
 
-```js
 // querystring内置库
 const query = querystring.parse(parsedUrl)
-```
 
-```js
+
 express 中间件能力 -> next()
-```
+
 
 ```js
 app.get('/path', 
