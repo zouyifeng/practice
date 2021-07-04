@@ -49,7 +49,7 @@ module.exports = {
 
 不涉及磁盘的IO文件输出，存放在内存中，速度更快。
 
-![hmr](./docs/hmr.png)
+![hmr](./docs/hmr原理.png)
 
 `hmr runtime`和`hmr server`以websocket形式连接
 
