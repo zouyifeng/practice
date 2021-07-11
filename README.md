@@ -50,7 +50,7 @@
 * [通过wireshark学习三次握手](./net/通过wireshark学习三次握手)
 
 ### 场景
-* [图片懒加载](./sences/img-lazy-load)
+* [图片懒加载](./scenes/img-lazy-load)
 * [无限滚动列表](https://codesandbox.io/s/suspicious-neumann-ehhu4?file=/src/App.vue)
 * [大文件上传](https://github.com/zouyifeng/file-upload)
 * [图片压缩](https://github.com/zouyifeng/js-image-compressor)
